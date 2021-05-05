@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +15,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::redirect('/', '/en', 301);
+
+Route::group(['prefix'=>'{lang}', 'middleware'=>'setLanguage'], function() {
+
+    Route::get('/', function () {
+        return view('index');
+    })->name('home');
+
 });
 
-Auth::routes();
+Route::group(['prefix'=>'admin'], function() {
+    Auth::routes();
+});
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');

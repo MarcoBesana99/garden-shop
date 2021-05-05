@@ -27,6 +27,9 @@ Route::group(['prefix'=>'{lang}', 'middleware'=>'setLanguage'], function() {
 
 Route::group(['prefix'=>'admin'], function() {
     Auth::routes();
+    Route::group(['middleware'=>'auth'], function() {
+        Route::get('/dashboard', function() {
+            return view('admin.dashboard');
+        })->name('dashboard');
+    });
 });
-
-Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');

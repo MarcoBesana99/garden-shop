@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminProductController;
 use Illuminate\Support\Facades\App;
@@ -32,5 +33,6 @@ Route::group(['prefix'=>'admin', 'as' => 'admin.'], function() {
             return view('admin.dashboard');
         })->name('dashboard');
         Route::resource('products', AdminProductController::class);
+        Route::resource('categories', AdminCategoryController::class);
     });
 });

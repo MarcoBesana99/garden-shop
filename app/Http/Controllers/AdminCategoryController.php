@@ -3,11 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
-use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
-class AdminProductController extends Controller
+class AdminCategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +15,8 @@ class AdminProductController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Category::all();
+        return view('admin.categories', compact('categories'));
     }
 
     /**
@@ -26,8 +26,7 @@ class AdminProductController extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
-        return view('admin.add-product', compact('categories'));
+        return view('admin.add-category');
     }
 
     /**
@@ -41,33 +40,20 @@ class AdminProductController extends Controller
         $request->validate([
             'name:en' => 'required',
             'name:ru' => 'required',
-            'description:en' => 'required',
-            'description:ru' => 'required',
-            'category' => 'required'
         ]);
 
-        foreach ($request->file('images') as $image) {
-            $name = $image->getClientOriginalName();
-            $image->move(public_path() . '/img/', $name);
-            $images[] = $name;
-        }
-
         $data = [
-            'images_path' => json_encode($images),
-            'category_id' => $request->category,
             'en' => [
                 'name' => $request->input('name:en'),
                 'slug' => Str::slug($request->input('name:en'),'-'),
-                'description' => $request->input('description:en')
             ],
             'ru' => [
                 'name' => $request->input('name:ru'),
                 'slug' => Str::slug($request->input('name:ru'),'-'),
-                'description' => $request->input('description:ru')
             ]
         ];
-        Product::create($data);
-        return redirect()->back();
+        Category::create($data);
+        return redirect()->back()->with('success','Category added successfully');
     }
 
     /**
@@ -87,9 +73,9 @@ class AdminProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Category $category)
     {
-        //
+        return view('admin.edit-category', ['category'=>$category]);
     }
 
     /**
@@ -99,9 +85,25 @@ class AdminProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Category $category)
     {
-        //
+        $request->validate([
+            'name:en' => 'required',
+            'name:ru' => 'required',
+        ]);
+
+        $data = [
+            'en' => [
+                'name' => $request->input('name:en'),
+                'slug' => Str::slug($request->input('name:en'),'-'),
+            ],
+            'ru' => [
+                'name' => $request->input('name:ru'),
+                'slug' => Str::slug($request->input('name:ru'),'-'),
+            ]
+        ];
+        $category->update($data);
+        return redirect()->back()->with('success','Category updated successfully');
     }
 
     /**
@@ -110,8 +112,9 @@ class AdminProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Category $category)
     {
-        //
+        $category->delete();
+        return redirect()->back()->with('success','Category deleted successfully');
     }
 }

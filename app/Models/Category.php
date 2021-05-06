@@ -12,7 +12,6 @@ class Category extends Model implements TranslatableContract
     use HasFactory, Translatable;
 
     public $translatedAttributes = ['name', 'slug'];
-    protected $fillable = ['product_id'];
 
     public function products() {
         return $this->hasMany(Product::class);

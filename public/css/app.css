@@ -10009,3 +10009,14 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.table td {
+  vertical-align: middle;
+}
+
+.delete-button {
+  color: red;
+}
+
+.edit-btn {
+  color: blue;
+}

@@ -7,14 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 use Astrotomic\Translatable\Contracts\Translatable as TranslatableContract;
 use Astrotomic\Translatable\Translatable;
 
-class Product extends Model implements TranslatableContract
+class Category extends Model implements TranslatableContract
 {
     use HasFactory, Translatable;
 
-    public $translatedAttributes = ['name', 'description', 'slug'];
-    protected $fillable = ['images_path'];
+    public $translatedAttributes = ['name', 'slug'];
+    protected $fillable = ['product_id'];
 
-    public function category() {
-        return $this->belongsTo(Category::class);
+    public function products() {
+        return $this->hasMany(Product::class);
     }
 }

@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\AdminProductController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -19,19 +19,18 @@ use Illuminate\Support\Facades\Route;
 
 Route::redirect('/', '/en', 301);
 
-Route::resource('products', ProductController::class);
-
 Route::group(['prefix'=>'{lang}', 'middleware'=>'setLanguage'], function() {
 
     Route::get('/', [HomeController::class, 'index'])->name('home');
 
 });
 
-Route::group(['prefix'=>'admin'], function() {
+Route::group(['prefix'=>'admin', 'as' => 'admin.'], function() {
     Auth::routes();
     Route::group(['middleware'=>'auth'], function() {
         Route::get('/dashboard', function() {
             return view('admin.dashboard');
         })->name('dashboard');
+        Route::resource('products', AdminProductController::class);
     });
 });

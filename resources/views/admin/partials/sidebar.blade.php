@@ -3,11 +3,11 @@
         {{ __('Garden') }}
     </div>
     <ul class="c-sidebar-nav ps ps--active-y">
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="index.html">
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.dashboard') }}">
                 <i class="fas fa-tachometer-alt c-sidebar-nav-icon"></i>{{ __('Dashboard') }}</a></li>
         </li>
         <li class="c-sidebar-nav-title">{{ __('Products') }}</li>
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="index.html">
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.products.create') }}">
             <i class="fas fa-edit c-sidebar-nav-icon"></i>{{ __('Submit Product') }}</a></li>
         <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a
                 class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
@@ -17,11 +17,11 @@
                             class="c-sidebar-nav-icon"></span> Breadcrumb</a></li>
             </ul>
         </li>
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.logout') }}" onclick="event.preventDefault();
             document.getElementById('logout-form').submit();">
                   {{ __('Logout') }}
               </a>
-              <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+              <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" class="d-none">
                   @csrf
               </form>
     </ul>

@@ -12,7 +12,7 @@ class Product extends Model implements TranslatableContract
     use HasFactory, Translatable;
 
     public $translatedAttributes = ['name', 'description', 'slug'];
-    protected $fillable = ['images_path'];
+    protected $fillable = ['images_path','category_id'];
 
     public function category() {
         return $this->belongsTo(Category::class);

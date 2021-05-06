@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class DeleteSlugColumnInProductsTable extends Migration
+class AddCategoryIdToProductsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class DeleteSlugColumnInProductsTable extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->string('slug');
+            $table->foreignId('category_id')->constrained();
         });
     }
 
@@ -26,7 +26,7 @@ class DeleteSlugColumnInProductsTable extends Migration
     public function down()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->string('slug');
+            //
         });
     }
 }

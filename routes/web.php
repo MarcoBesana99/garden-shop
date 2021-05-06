@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -17,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::redirect('/', '/en', 301);
+
+Route::resource('products', ProductController::class);
 
 Route::group(['prefix'=>'{lang}', 'middleware'=>'setLanguage'], function() {
 

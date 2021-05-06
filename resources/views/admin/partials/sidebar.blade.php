@@ -13,7 +13,7 @@
                 <i class="fas fa-plus c-sidebar-nav-icon"></i>{{ __('Submit Category') }}</a></li>
 
         <li class="c-sidebar-nav-title">{{ __('Products') }}</li>
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.products.create') }}">
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.products.index') }}">
             <i class="fas fa-edit c-sidebar-nav-icon"></i>{{ __('Products') }}</a></li>
         <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.products.create') }}">
                 <i class="fas fa-plus c-sidebar-nav-icon"></i>{{ __('Submit Product') }}</a></li>

@@ -41,7 +41,7 @@
 @section('scripts')
     <script>
         $(document).ready(function() {
-          $('.alert').fadeOut('slow')
+          $('.alert').fadeOut(4500)
         })
     </script>
 @endsection

@@ -16,7 +16,8 @@ class AdminProductController extends Controller
      */
     public function index()
     {
-        //
+        $products = Product::all();
+        return view('admin.products', compact('products'));
     }
 
     /**
@@ -57,12 +58,12 @@ class AdminProductController extends Controller
             'category_id' => $request->category,
             'en' => [
                 'name' => $request->input('name:en'),
-                'slug' => Str::slug($request->input('name:en'),'-'),
+                'slug' => Str::slug($request->input('name:en'), '-'),
                 'description' => $request->input('description:en')
             ],
             'ru' => [
                 'name' => $request->input('name:ru'),
-                'slug' => Str::slug($request->input('name:ru'),'-'),
+                'slug' => Str::slug($request->input('name:ru'), '-'),
                 'description' => $request->input('description:ru')
             ]
         ];
@@ -76,9 +77,9 @@ class AdminProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Product $product)
     {
-        //
+        return view('admin.product', ['product' => $product]);
     }
 
     /**
@@ -87,7 +88,7 @@ class AdminProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Product $product)
     {
         //
     }
@@ -99,7 +100,7 @@ class AdminProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Product $product)
     {
         //
     }
@@ -110,8 +111,9 @@ class AdminProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Product $product)
     {
-        //
+        $product->delete();
+        return redirect()->back()->with('success', 'Product deleted successfully');
     }
 }

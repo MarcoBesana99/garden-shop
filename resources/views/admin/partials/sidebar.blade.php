@@ -14,20 +14,13 @@
 
         <li class="c-sidebar-nav-title">{{ __('Products') }}</li>
         <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.products.index') }}">
-            <i class="fas fa-edit c-sidebar-nav-icon"></i>{{ __('Products') }}</a></li>
+                <i class="fas fa-edit c-sidebar-nav-icon"></i>{{ __('Products') }}</a></li>
         <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.products.create') }}">
                 <i class="fas fa-plus c-sidebar-nav-icon"></i>{{ __('Submit Product') }}</a></li>
-        <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a
-                class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
-                Base</a>
-            <ul class="c-sidebar-nav-dropdown-items">
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/breadcrumb.html"><span
-                            class="c-sidebar-nav-icon"></span> Breadcrumb</a></li>
-            </ul>
-        </li>
+        <li class="c-sidebar-nav-title">{{ __('Others') }}</li>
         <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.logout') }}" onclick="event.preventDefault();
             document.getElementById('logout-form').submit();">
-                {{ __('Logout') }}
+                <i class="fas fa-sign-out-alt c-sidebar-nav-icon"></i>{{ __('Logout') }}
             </a>
             <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" class="d-none">
                 @csrf

@@ -24,14 +24,14 @@
                             @csrf
                             @method('PUT')
                             <div class="form-group">
-                                <label for="enCategoryName">English Name</label>
+                                <label for="enCategoryName">{{ __('English Name') }}</label>
                                 <input type="text" class="form-control" value="{{ $category->translate('en')->name }}" name="name:en" id="enCategoryName" />
                             </div>
                             <div class="form-group">
-                                <label for="ruCategoryName">Russian Name</label>
+                                <label for="ruCategoryName">{{ __('Russian Name') }}</label>
                                 <input type="text" class="form-control" value="{{ $category->translate('ru')->name }}" name="name:ru" id="ruCategoryName" />
                             </div>
-                            <button type="submit" class="btn btn-primary mt-3 btn-block">Edit</button>
+                            <button type="submit" class="btn btn-primary mt-3 btn-block">{{ __('Edit') }}</button>
                         </form>
                     </div>
                 </div>

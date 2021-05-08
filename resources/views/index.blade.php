@@ -9,10 +9,3 @@
         <livewire:form />
     </div>
 @endsection
-@section('scripts')
-    <script>
-        $('#products').dropdown({
-            input: '<input type="text" placeholder="Search">'
-        })
-    </script>
-@endsection

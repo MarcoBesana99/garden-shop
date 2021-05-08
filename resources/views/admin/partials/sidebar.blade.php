@@ -17,6 +17,11 @@
                 <i class="fas fa-edit c-sidebar-nav-icon"></i>{{ __('Products') }}</a></li>
         <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.products.create') }}">
                 <i class="fas fa-plus c-sidebar-nav-icon"></i>{{ __('Submit Product') }}</a></li>
+        <li class="c-sidebar-nav-title">{{ __('Requests') }}</li>
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#">
+                <i class="fas fa-envelope-open-text c-sidebar-nav-icon"></i>{{ __('New Requests') }}</a></li>
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#">
+                <i class="fas fa-list c-sidebar-nav-icon"></i>{{ __('All Requests') }}</a></li>
         <li class="c-sidebar-nav-title">{{ __('Others') }}</li>
         <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.logout') }}" onclick="event.preventDefault();
             document.getElementById('logout-form').submit();">

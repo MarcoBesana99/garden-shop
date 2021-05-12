@@ -20,7 +20,7 @@
         <li class="c-sidebar-nav-title">{{ __('Requests') }}</li>
         <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#">
                 <i class="fas fa-envelope-open-text c-sidebar-nav-icon"></i>{{ __('New Requests') }}</a></li>
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#">
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.requests.index') }}">
                 <i class="fas fa-list c-sidebar-nav-icon"></i>{{ __('All Requests') }}</a></li>
         <li class="c-sidebar-nav-title">{{ __('Others') }}</li>
         <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.logout') }}" onclick="event.preventDefault();

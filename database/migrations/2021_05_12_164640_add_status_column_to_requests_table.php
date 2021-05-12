@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class DeleteProductIdColumnFromCategoriesTable extends Migration
+class AddStatusColumnToRequestsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class DeleteProductIdColumnFromCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::table('categories', function (Blueprint $table) {
-            $table->dropForeign(['product_id']);
-            $table->dropColumn('product_id');
+        Schema::table('requests', function (Blueprint $table) {
+            $table->string('status')->default('new');
         });
     }
 
@@ -26,7 +25,7 @@ class DeleteProductIdColumnFromCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::table('categories', function (Blueprint $table) {
+        Schema::table('requests', function (Blueprint $table) {
             //
         });
     }

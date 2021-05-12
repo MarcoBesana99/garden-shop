@@ -3,8 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Category;
-use App\Models\Product;
-use App\Models\Request;
+use App\Models\ClientRequest;
 use Livewire\Component;
 
 class Form extends Component
@@ -35,7 +34,7 @@ class Form extends Component
     {
         $this->validate();
 
-        $request = new Request();
+        $request = new ClientRequest();
         $request->email = $this->email;
         $request->first_name = $this->fname;
         $request->last_name = $this->lname;

@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminProductController;
+use App\Http\Controllers\AdminRequestsController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -34,5 +35,7 @@ Route::group(['prefix'=>'admin', 'as' => 'admin.'], function() {
         })->name('dashboard');
         Route::resource('products', AdminProductController::class);
         Route::resource('categories', AdminCategoryController::class);
+        Route::resource('requests', AdminRequestsController::class)->except('show');
+        Route::get('requests/{clientRequest}', [AdminRequestsController::class,'show'])->name('requests.show');
     });
 });

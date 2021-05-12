@@ -79,8 +79,5 @@
                 @this.requestedProducts = selectedProducts;
             }
         })
-        Livewire.on('refreshDropdownProducts', () => {
-            
-        })
     </script>
 @endsection

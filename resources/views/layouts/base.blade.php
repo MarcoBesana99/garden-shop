@@ -25,10 +25,10 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark shadow-sm fixed-top" id="navbarMenu">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <a class="navbar-brand font-weight-bold" href="{{ url('/') }}">
+                    {{ __('Eurazijos agro') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -38,8 +38,26 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link {{ Route::currentRouteName() == 'home' ? 'active' : '' }}">
+                                Home
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                Test
+                            </a>
+                        </li>
+                    </ul>
                     <ul class="navbar-nav mr-auto">
-
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                Test
+                            </a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -57,13 +75,14 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
     @livewireScripts
     @yield('scripts')
+    @stack('scripts')
 </body>
 
 </html>

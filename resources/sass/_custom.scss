@@ -88,3 +88,147 @@ h6 {
     padding: 4rem 2rem 2rem 2rem;
   }
 }
+
+.catalog-section.latest-catalog-section {
+  padding-bottom: 60px;
+}
+.catalog-section.profile-page {
+  padding-top: 50px;
+}
+
+.catalog-controls {
+  text-align: right;
+}
+.catalog-controls ul li {
+  list-style: none;
+  display: inline-block;
+  font-size: 14px;
+  color: #666666;
+  font-weight: 500;
+  margin-right: 35px;
+  position: relative;
+  cursor: pointer;
+}
+.catalog-controls ul li:after {
+  position: absolute;
+  right: -22px;
+  top: -1px;
+  content: "|";
+  color: #b1b0b0;
+}
+.catalog-controls ul li:last-child {
+  margin-right: 0;
+}
+.catalog-controls ul li:last-child:after {
+  display: none;
+}
+
+.catalog-item {
+  margin-bottom: 40px;
+}
+.catalog-item .pi-pic {
+  height: 240px;
+  position: relative;
+  margin-bottom: 25px;
+}
+.catalog-item .pi-pic .label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 3px 10px 2px;
+  display: inline-block;
+  background: #0166D0;
+  color: #ffffff;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+.catalog-item .pi-pic .label.c-red {
+  background: #D41800;
+}
+.catalog-item .pi-pic .label.c-magenta {
+  background: #103230;
+}
+.catalog-item .pi-text {
+  position: relative;
+}
+.catalog-item .pi-text .pt-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #00C89E;
+  margin-bottom: 10px;
+}
+.catalog-item .pi-text .pt-price span {
+  font-size: 14px;
+  color: #666666;
+  font-weight: 400;
+}
+.catalog-item .pi-text h5 {
+  margin-bottom: 6px;
+}
+.catalog-item .pi-text h5 a {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111111;
+  font-family: "Montserrat", sans-serif;
+}
+.catalog-item .pi-text p {
+  font-weight: 500;
+}
+.catalog-item .pi-text p span {
+  color: #00C89E;
+}
+.catalog-item .pi-text ul {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e1e1e1;
+}
+.catalog-item .pi-text ul li {
+  font-size: 15px;
+  color: #111111;
+  font-weight: 600;
+  list-style: none;
+  display: inline-block;
+  margin-right: 45px;
+}
+.catalog-item .pi-text ul li:last-child {
+  margin-right: 0;
+}
+.catalog-item .pi-text ul li i {
+  font-size: 14px;
+  color: #666666;
+  margin-right: 5px;
+}
+.catalog-item .pi-text .pi-agent .pa-item {
+  overflow: hidden;
+  padding-top: 10px;
+}
+.catalog-item .pi-text .pi-agent .pa-item .pa-info {
+  float: left;
+}
+.catalog-item .pi-text .pi-agent .pa-item .pa-info img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}
+.catalog-item .pi-text .pi-agent .pa-item .pa-info h6 {
+  font-size: 14px;
+  color: #111111;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+.catalog-item .pi-text .pi-agent .pa-item .pa-text {
+  font-size: 14px;
+  color: #00C89E;
+  font-weight: 600;
+  float: right;
+  line-height: 30px;
+}
+
+.set-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}

@@ -56,6 +56,7 @@
     </div>
     <div class="container mt-4">
         <livewire:form />
+        <x-catalog />
     </div>
 @endsection
 @push('scripts')

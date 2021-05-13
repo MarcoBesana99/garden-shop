@@ -2,9 +2,15 @@
 @section('content')
     <div class="container mt-4">
         <div class="row justify-content-center">
-            <div class="col-md-10">
+            <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">{{ __('Requests') }}</div>
+                    <div class="card-header d-flex">
+                        <div class="mr-auto">{{ __('Requests') }}</div>
+                        <form action="{{ route('admin.requests.index') }}" method="GET" class="d-flex">
+                            <input type="text" name="search" class="form-control" value="{{ request('search') }}">
+                            <button type="submit" class="btn btn-primary ml-3">Search</button>
+                        </form>
+                    </div>
                     <div class="card-body">
                         @if (session()->has('success'))
                             <div class="alert alert-success">
@@ -19,6 +25,7 @@
                                     <th>{{ __('Company') }}</th>
                                     <th>{{ __('Phone') }}</th>
                                     <th>{{ __('Status') }}</th>
+                                    <th>{{ __('Date') }}</th>
                                     <th>{{ __('Info') }}</th>
                                     <th>{{ __('Delete') }}</th>
                                 </tr>
@@ -50,6 +57,7 @@
                                                 </div>
                                             </form>
                                         </td>
+                                        <td>{{ $clientRequest->created_at->format('d/m/Y') }}</td>
                                         <td><a href="{{ route('admin.requests.show', $clientRequest) }}"><i
                                                     class="fas fa-share-square btn edit-btn"></i></a></td>
                                         <td>

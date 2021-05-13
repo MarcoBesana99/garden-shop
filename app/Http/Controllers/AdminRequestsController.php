@@ -12,17 +12,32 @@ class AdminRequestsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $clientRequests = ClientRequest::orderBy('created_at', 'desc')->get();
+        if ($request->has('search')) {
+            $clientRequests = ClientRequest::orderBy('created_at', 'desc')->where('email', 'like', '%' . $request->search . '%')
+                ->orWhere('first_name', 'like', '%' . $request->search . '%')
+                ->orWhere('last_name', 'like', '%' . $request->search . '%')
+                ->orWhere('company', 'like', '%' . $request->search . '%')->get();
+        } else {
+            $clientRequests = ClientRequest::orderBy('created_at', 'desc')->get();
+        }
         return view('admin.requests', compact('clientRequests'));
     }
 
-    public function newRequests()
+    public function newRequests(Request $request)
     {
-        $newRequests = ClientRequest::where('status','new')->get();
+        if ($request->has('search')) {
+            $newRequests = ClientRequest::orderBy('created_at', 'desc')->where('status', 'new')->where(function ($query) use ($request) {
+                $query->where('email', 'like', '%' . $request->search . '%');
+                $query->orWhere('first_name', 'like', '%' . $request->search . '%');
+                $query->orWhere('last_name', 'like', '%' . $request->search . '%');
+                $query->orWhere('company', 'like', '%' . $request->search . '%');
+            })->get();
+        } else {
+            $newRequests = ClientRequest::orderBy('created_at', 'desc')->where('status', 'new')->get();
+        }
         return view('admin.new-requests', compact('newRequests'));
-
     }
 
     /**

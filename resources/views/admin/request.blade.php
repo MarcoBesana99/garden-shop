@@ -39,12 +39,18 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <h6 class="font-weight-bold">{{ __('Message') }}</h6>
-                                <p>{{ $clientRequest->message }}</p>
+                                <h6 class="font-weight-bold">{{ __('Date') }}</h6>
+                                <p>{{ $clientRequest->created_at->format('d/m/Y') }}</p>
                             </div>
                             <div class="col-md-6">
                                 <h6 class="font-weight-bold">{{ __('Status') }}</h6>
                                 <p>{{ $clientRequest->status }}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h6 class="font-weight-bold">{{ __('Message') }}</h6>
+                                <p>{{ $clientRequest->message }}</p>
                             </div>
                         </div>
                     </div>

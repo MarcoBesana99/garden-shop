@@ -42,7 +42,7 @@
                                                 method="POST">
                                                 @csrf
                                                 @method('PUT')
-                                                <div class="form-group">
+                                                <div class="form-group d-flex justify-content-center mt-3">
                                                     <select name="status" onchange="this.form.submit()">
                                                         <option value="new"
                                                             {{ $clientRequest->status == 'new' ? 'selected' : '' }}>

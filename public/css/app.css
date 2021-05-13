@@ -10042,10 +10042,12 @@ h6 {
 
 .delete-button {
   color: red;
+  font-size: 18px;
 }
 
 .edit-btn {
   color: blue;
+  font-size: 18px;
 }
 
 #heroContainer {

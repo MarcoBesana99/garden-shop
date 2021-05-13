@@ -21,21 +21,22 @@ use Illuminate\Support\Facades\Route;
 
 Route::redirect('/', '/en', 301);
 
-Route::group(['prefix'=>'{lang}', 'middleware'=>'setLanguage'], function() {
+Route::group(['prefix' => '{lang}', 'middleware' => 'setLanguage'], function () {
 
     Route::get('/', [HomeController::class, 'index'])->name('home');
-
 });
 
-Route::group(['prefix'=>'admin', 'as' => 'admin.'], function() {
+Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     Auth::routes();
-    Route::group(['middleware'=>'auth'], function() {
-        Route::get('/dashboard', function() {
+    Route::group(['middleware' => 'auth'], function () {
+        Route::get('/dashboard', function () {
             return view('admin.dashboard');
         })->name('dashboard');
         Route::resource('products', AdminProductController::class);
         Route::resource('categories', AdminCategoryController::class);
-        Route::resource('requests', AdminRequestsController::class)->except('show');
-        Route::get('requests/{clientRequest}', [AdminRequestsController::class,'show'])->name('requests.show');
+        Route::resource('requests', AdminRequestsController::class)->except(['show', 'update', 'edit']);
+        Route::get('requests/{clientRequest}', [AdminRequestsController::class, 'show'])->name('requests.show');
+        Route::get('new-requests', [AdminRequestsController::class, 'newRequests'])->name('requests.new.requests');
+        Route::put('requests/{clientRequest}', [AdminRequestsController::class, 'update'])->name('requests.update');
     });
 });

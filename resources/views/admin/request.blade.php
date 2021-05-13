@@ -29,7 +29,9 @@
                             <div class="col-md-6">
                                 <h6 class="font-weight-bold">{{ __('Products') }}</h6>
                                 @if (json_decode($clientRequest->products) != null)
-                                    <p>{{ json_decode($clientRequest->products)[0] }}</p>
+                                    @foreach (json_decode($clientRequest->products) as $product)
+                                        <p>{{ $product }}</p>
+                                    @endforeach
                                 @else
                                     <p>No Products</p>
                                 @endif

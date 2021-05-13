@@ -24,7 +24,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($clientRequests as $clientRequest)
+                                @forelse ($newRequests as $clientRequest)
                                     <tr>
                                         <td>{{ $clientRequest->email }}</td>
                                         <td>{{ $clientRequest->first_name . ' ' . $clientRequest->last_name }}</td>
@@ -62,7 +62,11 @@
                                             </form>
                                         </td>
                                     </tr>
-                                @endforeach
+                                @empty
+                                    <td colspan="7">
+                                        <div class="alert alert-danger no-record mt-3">There are no new requests.</div>
+                                    </td>
+                                @endforelse
                             </tbody>
                         </table>
                     </div>
@@ -72,9 +76,9 @@
     </div>
 @endsection
 @section('scripts')
-    <script>
-        $(document).ready(function() {
-            $('.alert').fadeOut(4500)
-        })
-    </script>
+<script>
+    $(document).ready(function() {
+        $('.alert:not(.no-record)').fadeOut(4500)
+    })
+</script>
 @endsection

@@ -14,31 +14,17 @@ class AdminRequestsController extends Controller
      */
     public function index()
     {
-        $clientRequests = ClientRequest::orderBy('created_at','desc')->get();
+        $clientRequests = ClientRequest::orderBy('created_at', 'desc')->get();
         return view('admin.requests', compact('clientRequests'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function newRequests()
     {
-        //
+        $newRequests = ClientRequest::where('status','new')->get();
+        return view('admin.new-requests', compact('newRequests'));
+
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-  
     /**
      * show
      *
@@ -51,26 +37,16 @@ class AdminRequestsController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, ClientRequest $clientRequest)
     {
-        //
+        $clientRequest->update(['status' => $request->status]);
+        return redirect()->back()->with('success', 'The status of the request has been changed successfully');
     }
 
     /**

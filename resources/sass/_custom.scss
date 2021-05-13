@@ -11,7 +11,7 @@
   }
 }
 
-body {
+body, #app {
   overflow-x: hidden;
 }
 
@@ -87,7 +87,12 @@ h6 {
   & #benefitsRow {
     background-color: $main-green;
     margin-top: -40px;
-    padding: 4rem 2rem 2rem 2rem;
+    padding: 5.5rem 2rem 2rem 2rem;
+    color: white;
+
+    & .benefit-icon {
+      font-size: 50px;
+    }
   }
 }
 

@@ -10023,7 +10023,7 @@ h3 {
   box-shadow: none !important;
 }
 
-body {
+body, #app {
   overflow-x: hidden;
 }
 
@@ -10098,7 +10098,11 @@ h6 {
 #benefits #benefitsRow {
   background-color: #24A148;
   margin-top: -40px;
-  padding: 4rem 2rem 2rem 2rem;
+  padding: 5.5rem 2rem 2rem 2rem;
+  color: white;
+}
+#benefits #benefitsRow .benefit-icon {
+  font-size: 50px;
 }
 
 .catalog-section.latest-catalog-section {

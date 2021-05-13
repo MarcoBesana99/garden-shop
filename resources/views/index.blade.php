@@ -36,21 +36,29 @@
             </div>
         </div>
         <div class="row" id="benefitsRow">
-            <div class="col-md-3">
-                <div>Ciao</div>
-                <div>Ciao</div>
+            <div class="col-md-3 text-center">
+                <h4 class="font-weight-bold">{{ __('Good Prices') }}</h4>
+                <i class="fas fa-hand-holding-usd benefit-icon mt-3"></i>
+                <p class="mt-3">{{ __('We offer a wide range of goods for summer house, garden and vegetable garden. With us you can buy greenhouses, mini greenhouses, garden arbors, summer garden showers and other goods in bulk and at bargain prices.') }}
+                </p>
             </div>
-            <div class="col-md-3">
-                <div>Ciao</div>
-                <div>Ciao</div>
+            <div class="col-md-3 text-center">
+                <h4 class="font-weight-bold">{{ __('Individual Service') }}</h4>
+                <i class="far fa-handshake benefit-icon mt-3"></i>
+                <p class="mt-3">{{ __('Individual approach and selection of goods based on preferences of each market in Europe, Russia and Belarus.') }}
+                </p>
             </div>
-            <div class="col-md-3">
-                <div>Ciao</div>
-                <div>Ciao</div>
+            <div class="col-md-3 text-center">
+                <h4 class="font-weight-bold">{{ __('High Quality') }}</h4>
+                <i class="far fa-check-circle benefit-icon mt-3"></i>
+                <p class="mt-3">{{ __('All goods are manufactured using unique and modern technologies from quality raw materials and undergo quality control at all stages of production.') }}
+                </p>
             </div>
-            <div class="col-md-3">
-                <div>Ciao</div>
-                <div>Ciao</div>
+            <div class="col-md-3 text-center">
+                <h4 class="font-weight-bold">{{ __('Good Prices') }}</h4>
+                <i class="fas fa-hand-holding-usd benefit-icon mt-3"></i>
+                <p class="mt-3">{{ __('we offer a wide range of goods for dacha, garden and vegetable garden. With us you can buy greenhouses, mini greenhouses, garden arbors, summer garden showers and other goods in bulk and at bargain prices.') }}
+                </p>
             </div>
         </div>
     </div>

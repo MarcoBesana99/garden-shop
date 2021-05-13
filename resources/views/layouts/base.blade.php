@@ -40,7 +40,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="#" class="nav-link {{ Route::currentRouteName() == 'home' ? 'active' : '' }}">
+                            <a href="{{ route('home', app()->getLocale()) }}" class="nav-link {{ Route::currentRouteName() == 'home' ? 'active' : '' }}">
                                 Home
                             </a>
                         </li>

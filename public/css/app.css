@@ -10055,6 +10055,9 @@ h6 {
   background-size: cover;
   height: 100vh;
 }
+#heroContainer .subtitle {
+  font-size: 18px;
+}
 
 #overlay {
   position: fixed;
@@ -10064,7 +10067,7 @@ h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: -1;
   pointer-events: none;
 }
@@ -10094,6 +10097,11 @@ h6 {
 #benefits .container .row {
   color: white;
   background-color: #21243d;
+}
+@media screen and (max-width: 767px) {
+  #benefits .container .row h5 {
+    margin-bottom: 1rem;
+  }
 }
 #benefits #benefitsRow {
   background-color: #24A148;

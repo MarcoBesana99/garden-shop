@@ -8,13 +8,6 @@ use Illuminate\Http\Request;
 
 class SearchController extends Controller
 {
-    public function filterByCategory(Request $request)
-    {
-        $category = Category::whereTranslation('id', $request->category)->first();
-        $slug = $category->slug;
-        return redirect()->route('show.filtered.products', ['lang' => app()->getLocale(), 'slug' => $slug]);
-    }
-
     public function showFilteredProducts($lang, $slug)
     {
         $category = Category::whereTranslation('slug', $slug)->select('id')->first();

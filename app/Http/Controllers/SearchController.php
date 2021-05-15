@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Product;
-use Illuminate\Http\Request;
 
 class SearchController extends Controller
 {
@@ -15,6 +14,6 @@ class SearchController extends Controller
         $ruParam = ['lang' => 'ru', 'slug' => $param->translate('ru')->slug];
         $enParam = ['lang' => 'en', 'slug' => $param->translate('en')->slug];
         $products = Product::where('category_id', $category->id)->get();
-        return view('filtered-products', compact('products', 'ruParam', 'enParam'));
+        return view('filtered-products', compact('products', 'ruParam', 'enParam','slug'));
     }
 }

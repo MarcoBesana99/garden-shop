@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\AdminRequestsController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
@@ -24,8 +25,8 @@ Route::redirect('/', '/en', 301);
 
 Route::group(['prefix' => '{lang}', 'middleware' => 'setLanguage'], function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
-    Route::get('categories', [SearchController::class, 'filterByCategory'])->name('filtered.products');
     Route::get('{slug}', [SearchController::class, 'showFilteredProducts'])->name('show.filtered.products');
+    Route::get('{slug}/{productSlug}', [ProductController::class, 'index'])->name('show.product');
 });
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {

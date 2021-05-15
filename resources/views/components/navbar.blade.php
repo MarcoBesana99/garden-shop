@@ -47,5 +47,3 @@
         </div>
     </div>
 </nav>
-
-{{-- str_replace(app()->getLocale(), 'en', url()->full()) --}}

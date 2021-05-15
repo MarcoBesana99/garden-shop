@@ -60,7 +60,7 @@
             <textarea class="form-control" id="message" wire:model="message"></textarea>
             @error('message') <div class="alert alert-danger mt-2">{{ $message }}</div> @enderror
         </div>
-        <button type="submit" class="btn btn-primary">{{ __('Send Request') }}</button>
+        <button type="submit" class="btn custom-btn">{{ __('Send Request') }}</button>
     </form>
 </div>
 @section('scripts')

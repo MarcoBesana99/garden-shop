@@ -20,13 +20,18 @@
         @foreach ($products as $product)
             <div class="col-lg-4 col-md-6 mix all {{ strtolower($product->category->name) }}">
                 <div class="catalog-item">
-                    <div class="pi-pic set-bg rounded"
-                        data-setbg="{{ asset('img/' . json_decode($product->images_path)[0]) }}">
-                        <div class="label">For rent</div>
-                    </div>
+                    <a
+                        href="{{ route('show.product', [app()->getLocale(), $product->category->slug, $product->slug]) }}">
+                        <div class="pi-pic set-bg rounded"
+                            data-setbg="{{ asset('img/' . json_decode($product->images_path)[0]) }}">
+                            <div class="label">For rent</div>
+                        </div>
+                    </a>
                     <div class="pi-text">
                         <div class="pt-price">$ 289.0<span>/month</span></div>
-                        <h5><a href="#">{{ $product->name }}</a></h5>
+                        <h5><a
+                                href="{{ route('show.product', [app()->getLocale(), $product->category->slug, $product->slug]) }}">{{ $product->name }}</a>
+                        </h5>
                         <p><span class="icon_pin_alt"></span>{{ $product->description }}</p>
                         <ul>
                             <li><i class="fa fa-object-group"></i> 2, 283</li>

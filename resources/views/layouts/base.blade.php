@@ -17,7 +17,6 @@
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" />
 
-
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @livewireStyles
@@ -25,17 +24,27 @@
 
 <body>
     <div id="app">
-        
-        <x-navbar :enParam="$enParam" :ruParam="$ruParam"/>
+
+        <x-navbar :enParam="$enParam" :ruParam="$ruParam" />
 
         <main>
             @yield('content')
         </main>
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
-    @livewireScripts
-    @yield('scripts')
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            //parallax
+            new Rellax('.rellax');
+            $(document).scroll(() => {
+                let $nav = $("#navbarMenu");
+                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+            });
+        })
+    </script>
     @stack('scripts')
+    @livewireScripts
 </body>
 
 </html>

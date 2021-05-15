@@ -1,7 +1,7 @@
 @extends('layouts.base', ['enParam' => 'en', 'ruParam' => 'ru'])
 @section('content')
     <div class="rellax" id="heroContainer">
-        <div id="overlay"></div>
+        <div class="overlay"></div>
         <div class="container h-100" id="hero">
             <div class="row h-100">
                 <div class="h-100 col-md-7 d-flex flex-column justify-content-center">
@@ -31,8 +31,9 @@
                                 <option value="{{ $category->slug }}">{{ $category->name }}</option>
                             @endforeach
                         </select>
-                        <button type="submit" class="btn btn-primary ml-3">{{ __('Search') }}</button>
+                        <button type="submit" class="btn custom-btn ml-3">{{ __('Search') }}</button>
                     </form>
+                    <div id="searchError" class="mt-2" style="display: none; color:red">{{ __('Please select a category.') }}</div>
                 </div>
             </div>
         </div>
@@ -73,22 +74,15 @@
     </div>
 @endsection
 @push('scripts')
-    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
     <script type="text/javascript">
         $(function() {
-            //parallax
-            new Rellax('.rellax');
-            $(document).scroll(() => {
-                let $nav = $("#navbarMenu");
-                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-            });
             //dynamic form action
             const filterBtn = $('#filterForm button')
             filterBtn.click((e) => {
                 e.preventDefault()
                 let value = $("#categorySelect :selected").val();
                 if (value == 'default')
-                    return
+                    $('#searchError').show().fadeOut(6500)
                 else {
                     let form = document.getElementById("filterForm")
                     form.action = window.location.href + '/' + value

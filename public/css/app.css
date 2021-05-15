@@ -10023,7 +10023,8 @@ h3 {
   box-shadow: none !important;
 }
 
-body, #app {
+body,
+#app {
   overflow-x: hidden;
 }
 
@@ -10059,7 +10060,17 @@ h6 {
   font-size: 18px;
 }
 
-#overlay {
+.top-section {
+  background-image: url("/img/joanjo-puertos-hzelKVRXSJQ-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+}
+.top-section .overlay {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.overlay {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -10072,7 +10083,8 @@ h6 {
   pointer-events: none;
 }
 
-#hero {
+#hero,
+.top-section__container {
   z-index: 3;
   color: white;
 }
@@ -10088,6 +10100,16 @@ h6 {
   color: #fff;
   background-color: #24A148;
   border-color: #24A148;
+}
+.custom-btn:hover {
+  color: white;
+  background-color: #006400;
+  border-color: #006400;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.navbar select {
+  width: auto !important;
 }
 
 #benefits .container {
@@ -10155,6 +10177,10 @@ h6 {
 .catalog-item {
   margin-bottom: 40px;
 }
+.catalog-item:hover {
+  transform: scale(1.05);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
 
 .catalog-item .pi-pic {
   height: 240px;
@@ -10168,7 +10194,7 @@ h6 {
   text-transform: uppercase;
   padding: 3px 10px 2px;
   display: inline-block;
-  background: #0166D0;
+  background: #0166d0;
   color: #ffffff;
   position: absolute;
   left: 20px;
@@ -10176,7 +10202,7 @@ h6 {
 }
 
 .catalog-item .pi-pic .label.c-red {
-  background: #D41800;
+  background: #d41800;
 }
 
 .catalog-item .pi-pic .label.c-magenta {
@@ -10190,7 +10216,7 @@ h6 {
 .catalog-item .pi-text .pt-price {
   font-size: 18px;
   font-weight: 700;
-  color: #00C89E;
+  color: #00c89e;
   margin-bottom: 10px;
 }
 
@@ -10216,7 +10242,7 @@ h6 {
 }
 
 .catalog-item .pi-text p span {
-  color: #00C89E;
+  color: #00c89e;
 }
 
 .catalog-item .pi-text ul {
@@ -10270,7 +10296,7 @@ h6 {
 
 .catalog-item .pi-text .pi-agent .pa-item .pa-text {
   font-size: 14px;
-  color: #00C89E;
+  color: #00c89e;
   font-weight: 600;
   float: right;
   line-height: 30px;
@@ -10280,4 +10306,28 @@ h6 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
+}
+
+.breadcrumbs span {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.breadcrumbs span i {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+.breadcrumbs span a {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+.breadcrumbs span a:hover, .breadcrumbs span a:focus {
+  color: #24A148 !important;
+  text-decoration: none !important;
+}
+
+.bread {
+  font-size: 50px;
+  line-height: 1.1;
+  font-weight: 400;
 }

@@ -20,8 +20,9 @@
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        Test
+                    <a href="{{ route('catalog', app()->getLocale()) }}"
+                        class="nav-link {{ Route::currentRouteName() == 'catalog' ? 'active' : '' }}">
+                        {{ __('Catalog') }}
                     </a>
                 </li>
             </ul>

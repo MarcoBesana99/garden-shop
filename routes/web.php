@@ -25,8 +25,13 @@ Route::redirect('/', '/en', 301);
 
 Route::group(['prefix' => '{lang}', 'middleware' => 'setLanguage'], function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
-    Route::get('{slug}', [SearchController::class, 'showFilteredProducts'])->name('show.filtered.products');
-    Route::get('{slug}/{productSlug}', [ProductController::class, 'index'])->name('show.product');
+    Route::get(trans('routes.catalog'), function () {
+        return 'ciao';
+    })->name('catalog');
+    Route::group(['prefix' => trans('categories')], function() {
+        Route::get('{slug}', [SearchController::class, 'showFilteredProducts'])->name('show.filtered.products');
+        Route::get('{slug}/{productSlug}', [ProductController::class, 'index'])->name('show.product');    
+    });
 });
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {

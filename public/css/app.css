@@ -10116,12 +10116,12 @@ h6 {
   z-index: 2;
   position: relative;
 }
-#benefits .container .row {
+#benefits .container .search {
   color: white;
   background-color: #21243d;
 }
 @media screen and (max-width: 767px) {
-  #benefits .container .row h5 {
+  #benefits .container .search h5 {
     margin-bottom: 1rem;
   }
 }
@@ -10130,9 +10130,17 @@ h6 {
   margin-top: -40px;
   padding: 5.5rem 2rem 2rem 2rem;
   color: white;
+  display: flex;
+  justify-content: center;
 }
 #benefits #benefitsRow .benefit-icon {
   font-size: 50px;
+}
+
+.form-header {
+  color: white;
+  background-color: #21243d;
+  padding: 1.5rem;
 }
 
 .catalog-section.latest-catalog-section {

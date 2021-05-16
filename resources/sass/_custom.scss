@@ -107,7 +107,7 @@ h6 {
   & .container {
     z-index: 2;
     position: relative;
-    & .row {
+    & .search {
       color: white;
       background-color: #21243d;
       & h5 {
@@ -122,11 +122,19 @@ h6 {
     margin-top: -40px;
     padding: 5.5rem 2rem 2rem 2rem;
     color: white;
+    display: flex;
+    justify-content: center;
 
     & .benefit-icon {
       font-size: 50px;
     }
   }
+}
+
+.form-header {
+  color: white;
+  background-color: #21243d;
+  padding: 1.5rem;
 }
 
 .catalog-section.latest-catalog-section {

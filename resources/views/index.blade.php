@@ -19,7 +19,7 @@
     </div>
     <div class="rellax" data-rellax-speed="2" id="benefits">
         <div class="container">
-            <div class="row p-4 rounded justify-content-center align-content-center">
+            <div class="row p-4 rounded justify-content-center align-content-center search">
                 <div class="col-12 col-md-6 d-flex align-items-center">
                     <h5 class="font-weight-bold">{{ __('Browse our products') }}</h5>
                 </div>
@@ -33,44 +33,53 @@
                         </select>
                         <button type="submit" class="btn custom-btn ml-3">{{ __('Search') }}</button>
                     </form>
-                    <div id="searchError" class="mt-2" style="display: none; color:red">{{ __('Please select a category.') }}</div>
+                    <div id="searchError" class="mt-2" style="display: none; color:red">
+                        {{ __('Please select a category.') }}</div>
                 </div>
             </div>
         </div>
-        <div class="row" id="benefitsRow">
-            <div class="col-md-3 text-center">
-                <h4 class="font-weight-bold">{{ __('Diversification of products') }}</h4>
-                <i class="fas fa-hand-holding-usd benefit-icon mt-3"></i>
-                <p class="mt-3">
-                    {{ __('We offer a wide range of goods for summer houses, yards (greenhouses, mini greenhouses, garden arbors, summer garden showers and other goods in bulk) that can be viewed in the "Catalog" section.') }}
-                </p>
-            </div>
-            <div class="col-md-3 text-center">
-                <h4 class="font-weight-bold">{{ __('Individual Service') }}</h4>
-                <i class="far fa-handshake benefit-icon mt-3"></i>
-                <p class="mt-3">
-                    {{ __('Individual approach and selection of goods based on preferences of each market in Europe, Russia and Belarus.') }}
-                </p>
-            </div>
-            <div class="col-md-3 text-center">
-                <h4 class="font-weight-bold">{{ __('High Quality') }}</h4>
-                <i class="far fa-check-circle benefit-icon mt-3"></i>
-                <p class="mt-3">
-                    {{ __('All goods are manufactured using unique and modern technologies from quality raw materials and undergo quality control at all stages of production.') }}
-                </p>
-            </div>
-            <div class="col-md-3 text-center">
-                <h4 class="font-weight-bold">{{ __('Good Prices') }}</h4>
-                <i class="fas fa-hand-holding-usd benefit-icon mt-3"></i>
-                <p class="mt-3">
-                    {{ __('we offer a wide range of goods for dacha, garden and vegetable garden. With us you can buy greenhouses, mini greenhouses, garden arbors, summer garden showers and other goods in bulk and at bargain prices.') }}
-                </p>
+        <div id="benefitsRow">
+            <div class="container row">
+                <div class="col-md-6 col-lg-3 text-center">
+                    <h4 class="font-weight-bold">{{ __('Diversification of products') }}</h4>
+                    <i class="fas fa-hand-holding-usd benefit-icon mt-3"></i>
+                    <p class="mt-3">
+                        {{ __('We offer a wide range of goods for summer houses, yards (greenhouses, mini greenhouses, garden arbors, summer garden showers and other goods in bulk) that can be viewed in the "Catalog" section.') }}
+                    </p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center">
+                    <h4 class="font-weight-bold">{{ __('Individual Service') }}</h4>
+                    <i class="far fa-handshake benefit-icon mt-3"></i>
+                    <p class="mt-3">
+                        {{ __('Individual approach and selection of goods based on preferences of each market in Europe, Russia and Belarus.') }}
+                    </p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center">
+                    <h4 class="font-weight-bold">{{ __('High Quality') }}</h4>
+                    <i class="far fa-check-circle benefit-icon mt-3"></i>
+                    <p class="mt-3">
+                        {{ __('All goods are manufactured using unique and modern technologies from quality raw materials and undergo quality control at all stages of production.') }}
+                    </p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center">
+                    <h4 class="font-weight-bold">{{ __('Good Prices') }}</h4>
+                    <i class="fas fa-hand-holding-usd benefit-icon mt-3"></i>
+                    <p class="mt-3">
+                        {{ __('we offer a wide range of goods for dacha, garden and vegetable garden. With us you can buy greenhouses, mini greenhouses, garden arbors, summer garden showers and other goods in bulk and at bargain prices.') }}
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container mt-4">
-        <livewire:form />
-        <x-catalog />
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-7">
+
+                </div>
+                <div class="col-lg-5">
+                    <livewire:form />
+                </div>
+            </div>
+        </div>
     </div>
 @endsection
 @push('scripts')

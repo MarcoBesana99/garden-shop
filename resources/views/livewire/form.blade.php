@@ -7,6 +7,9 @@
         @endif
     </div>
     <form wire:submit.prevent="submitRequest">
+        <div class="mb-3 form-header">
+            <h4 class="font-weight-bold text-center">{{ __('Get a quote') }}</h4>
+        </div>
         <div>
             <label for="email">{{ __('Email address') }}*</label>
             <input type="text" class="form-control" id="email" wire:model="email">
@@ -60,10 +63,10 @@
             <textarea class="form-control" id="message" wire:model="message"></textarea>
             @error('message') <div class="alert alert-danger mt-2">{{ $message }}</div> @enderror
         </div>
-        <button type="submit" class="btn custom-btn">{{ __('Send Request') }}</button>
+        <button type="submit" class="btn custom-btn btn-block">{{ __('Send Request') }}</button>
     </form>
 </div>
-@section('scripts')
+@push('scripts')
     <script>
         $('#products').dropdown({
             multipleMode: 'label',
@@ -79,5 +82,10 @@
                 @this.requestedProducts = selectedProducts;
             }
         })
+        $('button').click(() => {
+            setTimeout(() => {
+                $('form .alert').fadeOut(6500)
+            }, 1000)
+        })
     </script>
-@endsection
+@endpush

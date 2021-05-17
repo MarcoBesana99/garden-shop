@@ -21,8 +21,8 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a href="{{ route('catalog', app()->getLocale()) }}"
-                        class="nav-link {{ Route::currentRouteName() == 'catalog' ? 'active' : '' }}">
-                        {{ __('Catalog') }}
+                        class="nav-link text-capitalize {{ Route::currentRouteName() == 'catalog' ? 'active' : '' }}">
+                        {{ __('catalog') }}
                     </a>
                 </li>
             </ul>

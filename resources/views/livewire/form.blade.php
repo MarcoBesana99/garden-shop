@@ -1,11 +1,4 @@
 <div>
-    <div>
-        @if (session()->has('message'))
-            <div class="alert alert-success">
-                {{ session('message') }}
-            </div>
-        @endif
-    </div>
     <form wire:submit.prevent="submitRequest">
         <div class="mb-3 form-header">
             <h4 class="font-weight-bold text-center">{{ __('Get a quote') }}</h4>
@@ -46,7 +39,7 @@
         <div class="form-group mt-3 products-selector-container">
             <label>{{ __('Products') }}</label>
             <div id="products" wire:ignore>
-                <select style="display:none"  multiple>
+                <select style="display:none" multiple>
                     @foreach ($categories as $category)
                         <optgroup label="{{ $category->name }}" data-group-id="{{ $category->id }}">
                             @foreach ($category->products as $product)
@@ -65,6 +58,11 @@
         </div>
         <button type="submit" class="btn custom-btn btn-block">{{ __('Send Request') }}</button>
     </form>
+    @if (session()->has('message'))
+        <div class="alert alert-success mt-3">
+            {{ session('message') }}
+        </div>
+    @endif
 </div>
 @push('scripts')
     <script>
@@ -84,8 +82,9 @@
         })
         $('button').click(() => {
             setTimeout(() => {
-                $('form .alert').fadeOut(6500)
+                $('.alert').fadeOut(6500)
             }, 1000)
         })
+
     </script>
 @endpush

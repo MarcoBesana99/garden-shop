@@ -17,8 +17,8 @@
             </div>
         </div>
     </div>
-    <div class="rellax" data-rellax-speed="2" id="benefits">
-        <div class="container">
+    <div id="benefits">
+        <div class="container search-container">
             <div class="row p-4 rounded justify-content-center align-content-center search">
                 <div class="col-12 col-md-6 d-flex align-items-center">
                     <h5 class="font-weight-bold">{{ __('Browse our products') }}</h5>
@@ -70,13 +70,15 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-lg-7">
-
-                </div>
-                <div class="col-lg-5">
-                    <livewire:form />
+        <div id="formSection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+    
+                    </div>
+                    <div class="col-lg-5">
+                        <livewire:form />
+                    </div>
                 </div>
             </div>
         </div>

@@ -24,32 +24,11 @@
                         href="{{ route('show.product', [app()->getLocale(), $product->category->slug, $product->slug]) }}">
                         <div class="pi-pic set-bg rounded"
                             data-setbg="{{ asset('img/' . json_decode($product->images_path)[0]) }}">
-                            <div class="label">For rent</div>
+                        </div>
+                        <div class="pi-text">
+                            <h5>{{ $product->name }}</h5>
                         </div>
                     </a>
-                    <div class="pi-text">
-                        <h5><a
-                                href="{{ route('show.product', [app()->getLocale(), $product->category->slug, $product->slug]) }}">{{ $product->name }}</a>
-                        </h5>
-                        <p><span class="icon_pin_alt"></span>{{ $product->description }}</p>
-                        <ul>
-                            <li><i class="fa fa-object-group"></i> 2, 283</li>
-                            <li><i class="fa fa-bathtub"></i> 03</li>
-                            <li><i class="fa fa-bed"></i> 05</li>
-                            <li><i class="fa fa-automobile"></i> 01</li>
-                        </ul>
-                        <div class="pi-agent">
-                            <div class="pa-item">
-                                <div class="pa-info">
-                                    <img src="img/catalog/posted-by/pb-1.jpg" alt="">
-                                    <h6>Ashton Kutcher</h6>
-                                </div>
-                                <div class="pa-text">
-                                    123-455-688
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         @endforeach

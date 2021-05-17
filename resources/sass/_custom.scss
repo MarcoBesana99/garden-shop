@@ -16,6 +16,10 @@ body,
   overflow-x: hidden;
 }
 
+body {
+  background-color: $main-green;
+}
+
 h1,
 h2,
 h3,
@@ -104,6 +108,9 @@ h6 {
 }
 
 #benefits {
+  & .search-container {
+    margin-top: 40px;
+  }
   & .container {
     z-index: 2;
     position: relative;
@@ -136,14 +143,6 @@ h6 {
   background-color: #21243d;
   padding: 1.5rem;
 }
-
-.catalog-section.latest-catalog-section {
-  padding-bottom: 60px;
-}
-.catalog-section.profile-page {
-  padding-top: 50px;
-}
-
 .catalog-controls {
   text-align: right;
 }
@@ -156,6 +155,17 @@ h6 {
   margin-right: 35px;
   position: relative;
   cursor: pointer;
+  text-transform: capitalize;
+
+  &:hover {
+    border-bottom: 3px solid $main-green;
+    color: $main-green;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+}
+.mixitup-control-active {
+  border-bottom: 3px solid $main-green;
+  color: $main-green !important;
 }
 .catalog-controls ul li:after {
   position: absolute;
@@ -170,121 +180,53 @@ h6 {
 .catalog-controls ul li:last-child:after {
   display: none;
 }
-
 .catalog-item {
   margin-bottom: 40px;
+  position: relative;
   &:hover {
     transform: scale(1.05);
     transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 }
 .catalog-item .pi-pic {
-  height: 240px;
+  height: 290px;
   position: relative;
-  margin-bottom: 25px;
-}
-.catalog-item .pi-pic .label {
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  padding: 3px 10px 2px;
-  display: inline-block;
-  background: #0166d0;
-  color: #ffffff;
-  position: absolute;
-  left: 20px;
-  top: 20px;
-}
-.catalog-item .pi-pic .label.c-red {
-  background: #d41800;
-}
-.catalog-item .pi-pic .label.c-magenta {
-  background: #103230;
 }
 .catalog-item .pi-text {
-  position: relative;
+  position: absolute;
+  background-color: rgba(36, 161, 72, 0.85);
+  padding: 12px;
+  width: 100%;
+  bottom: 0;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
-.catalog-item .pi-text .pt-price {
-  font-size: 18px;
-  font-weight: 700;
-  color: #00c89e;
-  margin-bottom: 10px;
-}
-.catalog-item .pi-text .pt-price span {
-  font-size: 14px;
-  color: #666666;
-  font-weight: 400;
-}
-.catalog-item .pi-text h5 {
-  margin-bottom: 6px;
-}
-.catalog-item .pi-text h5 a {
+.catalog-item a {
   font-size: 20px;
   font-weight: 700;
-  color: #111111;
-  font-family: "Montserrat", sans-serif;
+  color: white;
+  & h5 {
+    font-weight: 400;
+  }
+  &:hover {
+    text-decoration: none;
+    & .pi-text {
+      height: 100%;
+      transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.25rem;
+      & h5 {
+        font-size: 30px;
+      }
+    }
+  }
 }
-.catalog-item .pi-text p {
-  font-weight: 500;
-}
-.catalog-item .pi-text p span {
-  color: #00c89e;
-}
-.catalog-item .pi-text ul {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e1e1e1;
-}
-.catalog-item .pi-text ul li {
-  font-size: 15px;
-  color: #111111;
-  font-weight: 600;
-  list-style: none;
-  display: inline-block;
-  margin-right: 45px;
-}
-.catalog-item .pi-text ul li:last-child {
-  margin-right: 0;
-}
-.catalog-item .pi-text ul li i {
-  font-size: 14px;
-  color: #666666;
-  margin-right: 5px;
-}
-.catalog-item .pi-text .pi-agent .pa-item {
-  overflow: hidden;
-  padding-top: 10px;
-}
-.catalog-item .pi-text .pi-agent .pa-item .pa-info {
-  float: left;
-}
-.catalog-item .pi-text .pi-agent .pa-item .pa-info img {
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 10px;
-}
-.catalog-item .pi-text .pi-agent .pa-item .pa-info h6 {
-  font-size: 14px;
-  color: #111111;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  display: inline-block;
-}
-.catalog-item .pi-text .pi-agent .pa-item .pa-text {
-  font-size: 14px;
-  color: #00c89e;
-  font-weight: 600;
-  float: right;
-  line-height: 30px;
-}
-
 .set-bg {
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top center;
+  background-position: center;
 }
-
 .breadcrumbs {
   & span {
     color: rgba(255, 255, 255, 0.7) !important;
@@ -297,7 +239,8 @@ h6 {
     }
     & a {
       color: rgba(255, 255, 255, 0.7) !important;
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         color: $main-green !important;
         text-decoration: none !important;
       }
@@ -308,4 +251,30 @@ h6 {
   font-size: 50px;
   line-height: 1.1;
   font-weight: 400;
+}
+#formSection {
+  position: relative;
+  & form  {
+    background-color: white;
+    height: 100%;
+    & .form-body {
+      padding: 1rem;
+    }
+  }
+  & label {
+    font-weight: bold;
+  }
+  &:before {
+    content: "";
+    background-image: url("/img/bg-form.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+  }
 }

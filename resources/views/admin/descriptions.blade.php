@@ -4,12 +4,16 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                  <div class="card-header d-flex">
-                    <div class="mr-auto">{{ __('Descriptions') }}</div>
-                    <a href="{{ route('admin.descriptions.create', $productId) }}" class="d-flex">
-                        <button type="submit" class="btn btn-primary ml-3">Add Description</button>
-                    </a>
-                </div>
+                    <div class="card-header d-flex">
+                        <div class="mr-auto">
+                            <a href="{{ route('admin.products.index') }}"><i class="far fa-arrow-alt-circle-left mr-3"
+                                    style="color: gray; font-size: 20px"></i></a>
+                            {{ __('Descriptions') }}
+                        </div>
+                        <a href="{{ route('admin.descriptions.create', $productId) }}" class="d-flex">
+                            <button type="submit" class="btn btn-primary ml-3">Add Description</button>
+                        </a>
+                    </div>
                     <div class="card-body">
                         @if (session()->has('success'))
                             <div class="alert alert-success">
@@ -32,11 +36,12 @@
                                         <td>{{ $description->translate('en')->title }}</td>
                                         <td>{{ $description->translate('ru')->title }}</td>
                                         <td><a href="{{ route('admin.descriptions.show', [$productId, $description]) }}"><i
-                                            class="fas fa-share-square btn edit-btn"></i></a></td>
+                                                    class="fas fa-share-square btn edit-btn"></i></a></td>
                                         <td><a href="{{ route('admin.descriptions.edit', [$productId, $description]) }}"><i
                                                     class="fas fa-edit btn edit-btn"></i></a></td>
                                         <td>
-                                            <form action="{{ route('admin.descriptions.destroy', [$productId, $description->id]) }}"
+                                            <form
+                                                action="{{ route('admin.descriptions.destroy', [$productId, $description->id]) }}"
                                                 method="POST" style="display: inline-block">
                                                 @csrf
                                                 @method('DELETE')
@@ -57,7 +62,8 @@
 @section('scripts')
     <script>
         $(document).ready(function() {
-          $('.alert').fadeOut(4500)
+            $('.alert').fadeOut(4500)
         })
+
     </script>
 @endsection

@@ -82,7 +82,7 @@ class DescriptionController extends Controller
      */
     public function show($productId, $id)
     {
-        return view('admin.description', ['description' => Description::where('id', $id)->first()]);
+        return view('admin.description', ['productId' => $productId, 'description' => Description::where('id', $id)->first()]);
     }
 
     /**
@@ -138,7 +138,7 @@ class DescriptionController extends Controller
             $data['images_path'] = json_encode($images);
         }
 
-        $description ->update($data);
+        $description->update($data);
         return redirect()->back()->with('success', 'Description updated successfully');
     }
 

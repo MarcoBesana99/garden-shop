@@ -4,7 +4,9 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Edit product') }}</div>
+                    <div class="card-header">
+                        <a href="{{ route('admin.products.index') }}"><i class="far fa-arrow-alt-circle-left mr-3" style="color: gray; font-size: 20px"></i></a>
+                        {{ __('Edit product') }}</div>
 
                     <div class="card-body">
                         @if ($errors->any())

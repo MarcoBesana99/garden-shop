@@ -4,7 +4,10 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header font-weight-bold">{{ $description->translate('en')->title }} |
+                    <div class="card-header font-weight-bold">
+                        <a href="{{ route('admin.descriptions.index', $productId) }}"><i class="far fa-arrow-alt-circle-left mr-3"
+                            style="color: gray; font-size: 20px"></i></a>
+                        {{ $description->translate('en')->title }} |
                         {{ $description->translate('ru')->title }}</div>
                     <div class="card-body">
                         <div class="row">

@@ -4,7 +4,9 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header font-weight-bold">{{ $product->translate('en')->name }} |
+                    <div class="card-header font-weight-bold">
+                        <a href="{{ route('admin.products.index') }}"><i class="far fa-arrow-alt-circle-left mr-3" style="color: gray; font-size: 20px"></i></a>
+                        {{ $product->translate('en')->name }} |
                         {{ $product->translate('ru')->name }}</div>
                     <div class="card-body">
                         <div class="row">

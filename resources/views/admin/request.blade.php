@@ -5,6 +5,8 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header font-weight-bold">
+                        <a href="{{ route('admin.requests.index') }}"><i class="far fa-arrow-alt-circle-left mr-3"
+                            style="color: gray; font-size: 20px"></i></a>
                         {{ $clientRequest->first_name . ' ' . $clientRequest->last_name }}</div>
                     <div class="card-body">
                         <div class="row">

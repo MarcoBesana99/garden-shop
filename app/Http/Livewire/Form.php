@@ -15,7 +15,6 @@ class Form extends Component
     public $phone;
     public $company;
     public $message;
-    public $iteration = 0;
 
     protected $rules = [
         'email' => 'required|email',

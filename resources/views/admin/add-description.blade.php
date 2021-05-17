@@ -4,7 +4,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Add a product') }}</div>
+                    <div class="card-header">{{ __('Add a description') }}</div>
 
                     <div class="card-body">
                         @if ($errors->any())
@@ -18,29 +18,36 @@
                         @endif
                         @if (session()->has('success'))
                             <div class="alert alert-success">
-                              {{ session()->get('success') }}
+                                {{ session()->get('success') }}
                             </div>
                         @endif
-                        <form action="{{ route('admin.products.store') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('admin.descriptions.store', $productId) }}" method="POST"
+                            enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                                <label for="enProductName">English Name</label>
-                                <input type="text" class="form-control" value="{{ old('name:en') }}" name="name:en" id="enProductName" />
+                                <label for="enDescTitle">English Title*</label>
+                                <input type="text" class="form-control" value="{{ old('title:en') }}" name="title:en"
+                                    id="enDescTitle" />
                             </div>
                             <div class="form-group">
-                                <label for="ruProductName">Russian Name</label>
-                                <input type="text" class="form-control" value="{{ old('name:ru') }}" name="name:ru" id="ruProductName" />
+                                <label for="ruDescTitle">Russian Title*</label>
+                                <input type="text" class="form-control" value="{{ old('title:ru') }}" name="title:ru"
+                                    id="ruDescTitle" />
+                            </div>
+                            <div class="form-group">
+                                <label for="enDescContent">English Content*</label>
+                                <textarea type="text" class="form-control" name="content:en" id="enDescContent"
+                                    rows="4">{{ old('content:en') }}</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="ruDescContent">Russian Content*</label>
+                                <textarea type="text" class="form-control" name="content:ru" id="ruDescContent"
+                                    rows="4">{{ old('content:en') }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label>Add Images</label>
                                 <div class="input-images"></div>
                             </div>
-                            <select class="form-control" name="category">
-                                <option>Select a category</option>
-                                @foreach ($categories as $category)
-                                    <option value="{{ $category->id }}">{{ $category->translate('en')->name }}</option>
-                                @endforeach
-                            </select>
                             <button type="submit" class="btn btn-primary mt-3 btn-block">Add</button>
                         </form>
                     </div>

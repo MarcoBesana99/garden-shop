@@ -17,4 +17,8 @@ class Product extends Model implements TranslatableContract
     public function category() {
         return $this->belongsTo(Category::class);
     }
+
+    public function descriptions() {
+        return $this->hasMany(Description::class);
+    }
 }

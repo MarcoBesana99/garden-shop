@@ -9,16 +9,6 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6">
-                                <h6 class="font-weight-bold">{{ __('English Description') }}</h6>
-                                <p>{{ $product->translate('en')->description }}</p>
-                            </div>
-                            <div class="col-md-6">
-                                <h6 class="font-weight-bold">{{ __('Russian Description') }}</h6>
-                                <p>{{ $product->translate('ru')->description }}</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
                                 <h6 class="font-weight-bold">{{ __('English Category') }}</h6>
                                 <p>{{ $product->category->translate('en')->name }}</p>
                             </div>

@@ -29,18 +29,8 @@
                                 <input type="text" class="form-control" value="{{ $product->translate('en')->name }}" name="name:en" id="enProductName" />
                             </div>
                             <div class="form-group">
-                                <label for="enProductDesc">{{ __('English Description') }}</label>
-                                <textarea type="text" class="form-control" name="description:en" id="enProductDesc"
-                                    rows="4">{{ $product->translate('en')->description }}</textarea>
-                            </div>
-                            <div class="form-group">
                                 <label for="ruProductName">{{ __('Russian Name') }}</label>
                                 <input type="text" class="form-control" value="{{ $product->translate('ru')->name }}" name="name:ru" id="ruProductName" />
-                            </div>
-                            <div class="form-group">
-                                <label for="ruProductDesc">{{ __('Russian Description') }}</label>
-                                <textarea type="text" class="form-control" name="description:ru" id="ruProductDesc"
-                                    rows="4">{{ $product->translate('ru')->description }}</textarea>
                             </div>
                             <div class="row form-group">
                               <div class="col-12"><label>{{ __('Preview of Images') }}</label></div>

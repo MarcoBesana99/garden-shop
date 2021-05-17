@@ -29,7 +29,6 @@
                                 </div>
                             </a>
                             <div class="pi-text">
-                                <div class="pt-price">$ 289.0<span>/month</span></div>
                                 <h5><a
                                         href="{{ route('show.product', [app()->getLocale(), $slug, $product->slug]) }}">{{ $product->name }}</a>
                                 </h5>

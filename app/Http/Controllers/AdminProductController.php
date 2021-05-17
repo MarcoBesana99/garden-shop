@@ -42,8 +42,6 @@ class AdminProductController extends Controller
         $request->validate([
             'name:en' => 'required',
             'name:ru' => 'required',
-            'description:en' => 'required',
-            'description:ru' => 'required',
             'category' => 'required',
             'images' => 'required'
         ]);
@@ -59,13 +57,11 @@ class AdminProductController extends Controller
             'category_id' => $request->category,
             'en' => [
                 'name' => $request->input('name:en'),
-                'slug' => Str::slug($request->input('name:en'), '-'),
-                'description' => $request->input('description:en')
+                'slug' => Str::slug($request->input('name:en'), '-')
             ],
             'ru' => [
                 'name' => $request->input('name:ru'),
-                'slug' => Str::slug($request->input('name:ru'), '-'),
-                'description' => $request->input('description:ru')
+                'slug' => Str::slug($request->input('name:ru'), '-')
             ]
         ];
         Product::create($data);
@@ -107,8 +103,6 @@ class AdminProductController extends Controller
         $request->validate([
             'name:en' => 'required',
             'name:ru' => 'required',
-            'description:en' => 'required',
-            'description:ru' => 'required',
             'category' => 'required'
         ]);
 
@@ -116,13 +110,11 @@ class AdminProductController extends Controller
             'category_id' => $request->category,
             'en' => [
                 'name' => $request->input('name:en'),
-                'slug' => Str::slug($request->input('name:en'), '-'),
-                'description' => $request->input('description:en')
+                'slug' => Str::slug($request->input('name:en'), '-')
             ],
             'ru' => [
                 'name' => $request->input('name:ru'),
-                'slug' => Str::slug($request->input('name:ru'), '-'),
-                'description' => $request->input('description:ru')
+                'slug' => Str::slug($request->input('name:ru'), '-')
             ]
         ];
 

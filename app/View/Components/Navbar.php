@@ -3,7 +3,6 @@
 namespace App\View\Components;
 
 use Illuminate\Support\Facades\Lang;
-use Illuminate\Support\Facades\URL;
 use Illuminate\View\Component;
 use Illuminate\Support\Facades\Route;
 
@@ -29,27 +28,21 @@ class Navbar extends Component
      */
     public function render()
     {
-        $enUrl = '';
-        $ruUrl = '';
-        $enCurrentUrl = route(Route::currentRouteName(), $this->enParam);
-        $ruCurrentUrl = route(Route::currentRouteName(), $this->ruParam);
-        $enCurrentRequest = app('request')->create($enCurrentUrl);
-        $ruCurrentRequest = app('request')->create($ruCurrentUrl);
-        $enSegments = $enCurrentRequest->segments();
-        $ruSegments = $ruCurrentRequest->segments();
-        for ($i = 0; $i < count($enSegments); $i++) {
-            if (Lang::has('routes.' . $enSegments[$i], 'en')) {
-                $enSegments[$i] = Lang::get('routes.' . $enSegments[$i], [], 'en');
+        //create urls for the lang switcher
+        $urls = [];
+        foreach (config('translatable.locales') as $index => $locale) {
+            ${$locale . 'CurrentUrl'} = route(Route::currentRouteName(), $this->{$locale . 'Param'});
+            ${$locale . 'CurrentRequest'} = app('request')->create(${$locale . 'CurrentUrl'});
+            ${$locale . 'Segments'} = ${$locale . 'CurrentRequest'}->segments();
+            for ($i = 0; $i < count(${$locale . 'Segments'}); $i++) {
+                if (Lang::has(${$locale . 'Segments'}[$i], $locale)) {
+                    ${$locale . 'Segments'}[$i] = Lang::get(${$locale . 'Segments'}[$i], [], $locale);
+                }
             }
+            $urls[$index]['locale'] = $locale;
+            $urls[$index]['url'] = '/' . implode('/', ${$locale . 'Segments'});;
         }
-        $enUrl = implode('/', $enSegments);
-        for ($i = 0; $i < count($ruSegments); $i++) {
-            if (Lang::has('routes.' . $ruSegments[$i], 'ru')) {
-                $ruSegments[$i] = Lang::get('routes.' . $ruSegments[$i], [], 'ru');
-            }
-        }
-        $ruUrl = implode('/', $ruSegments);
-        dd($enUrl);
-        return view('components.navbar');
+        
+        return view('components.navbar', compact('urls'));
     }
 }

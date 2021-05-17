@@ -25,7 +25,7 @@ Route::redirect('/', '/en', 301);
 
 Route::group(['prefix' => '{lang}', 'middleware' => 'setLanguage'], function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
-    Route::get(trans('routes.catalog'), function () {
+    Route::get(trans('catalog'), function () {
         return 'ciao';
     })->name('catalog');
     Route::group(['prefix' => trans('categories')], function() {

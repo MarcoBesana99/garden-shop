@@ -94,7 +94,13 @@
                     $('#searchError').show().fadeOut(6500)
                 else {
                     let form = document.getElementById("filterForm")
-                    form.action = window.location.href + '/categories/' + value
+                    let url = window.location.href
+                    let cat = ''
+                    if ( url.includes('/en'))
+                        cat = '/categories/'
+                    else
+                        cat = '/kat/'
+                    form.action = url + cat + value
                     form.submit()
                 }
             })

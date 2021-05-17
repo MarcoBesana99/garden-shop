@@ -38,10 +38,12 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <select class="form-control" onchange="location = this.value">
-                        <option value="{{ route(Route::currentRouteName(), $enParam) }}"
-                            {{ app()->getLocale() == 'en' ? 'selected' : '' }}>EN</option>
-                        <option value="{{ route(Route::currentRouteName(), $ruParam) }}"
-                            {{ app()->getLocale() == 'ru' ? 'selected' : '' }}>RU</option>
+                        @foreach ($urls as $url)
+                            <option value="{{ $url['url'] }}"
+                                {{ app()->getLocale() == $url['locale'] ? 'selected' : '' }}>
+                                {{ strtoupper($url['locale']) }}
+                            </option>
+                        @endforeach
                     </select>
                 </li>
             </ul>

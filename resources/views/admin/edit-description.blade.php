@@ -54,7 +54,7 @@
                                     @foreach (json_decode($description->images_path) as $image)
                                         <div class="col-md-4 mt-3">
                                             <img class="mw-100" src="{{ asset('img/' . $image) }}"
-                                                alt="{{ $description->translate('en')->name }}">
+                                                alt="{{ $description->translate('en')->title }}">
                                         </div>
                                     @endforeach
                                 </div>

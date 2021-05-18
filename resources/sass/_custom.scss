@@ -254,7 +254,7 @@ h6 {
 }
 #formSection {
   position: relative;
-  & form  {
+  & form {
     background-color: white;
     height: 100%;
     & .form-body {
@@ -277,4 +277,33 @@ h6 {
     left: 0px;
     opacity: 0.5;
   }
+}
+.page-title {
+  overflow: hidden;
+  text-align: center;
+  color: $main-green;
+  &:before,
+  &:after {
+    background-color: $main-green;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 10%;
+  }
+  &:before {
+    right: 0.5em;
+    margin-left: -50%;
+  }
+  &:after {
+    left: 0.5em;
+    margin-right: -50%;
+  }
+}
+.owl-dot.active span {
+  background-color: $main-green !important;
+}
+.owl-dot span {
+  background-color: rgba(49, 155, 79, 0.50) !important;
 }

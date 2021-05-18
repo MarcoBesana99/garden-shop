@@ -1,11 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-lg-5">
-            <div class="section-title">
-                <h4>{{ __('Our Catalog') }}</h4>
-            </div>
-        </div>
-        <div class="col-lg-7">
+        <div class="col-12">
             <div class="catalog-controls">
                 <ul>
                     <li data-filter="all">{{ __('All') }}</li>

@@ -10,14 +10,14 @@
                                 <i class="fa fa-chevron-right"></i></a></span>
                         <span>{{ __('categories') }} <i class="fa fa-chevron-right"></i></span>
                     </p>
-                    <h1 class="mb-3 bread text-capitalize">{{ $slug }}</h1>
+                    <h1 class="mb-3 bread text-capitalize">{{ $categoryName }}</h1>
                 </div>
             </div>
         </div>
     </div>
     <div class="rellax" data-rellax-speed="2" style="background-color: white">
         <div class="container p-4">
-            <h2 class="font-weight-bold mt-5">{{ $slug }}</h2>
+            <h2 class="font-weight-bold mt-3 mb-5 page-title text-capitalize">{{ __('what we offer') }}</h2>
             <div class="row catalog-filter">
                 @foreach ($products as $product)
                     <div class="col-lg-4 col-md-6 mix all {{ strtolower($product->category->name) }}">

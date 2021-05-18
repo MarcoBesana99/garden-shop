@@ -11,8 +11,9 @@ class ProductController extends Controller
         $category = Category::whereTranslation('slug', $slug)->select('id')->first();
         $param = Category::where('id', $category->id)->first();
         $product = Product::where('category_id', $category->id)->first();
+        $descriptions = $product->descriptions;
         $ruParam = ['lang' => 'ru', 'slug' => $param->translate('ru')->slug, 'productSlug' => $product->translate('ru')->slug];
         $enParam = ['lang' => 'en', 'slug' => $param->translate('en')->slug, 'productSlug' => $product->translate('en')->slug];
-        return view('product', compact('product', 'ruParam', 'enParam','slug'));
+        return view('product', compact('product', 'ruParam', 'enParam','slug','descriptions'));
     }
 }

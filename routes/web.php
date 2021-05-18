@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\AdminRequestsController;
 use App\Http\Controllers\DescriptionController;
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Auth;
@@ -26,9 +27,7 @@ Route::redirect('/', '/en', 301);
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     Auth::routes();
     Route::group(['middleware' => 'auth'], function () {
-        Route::get('/dashboard', function () {
-            return view('admin.dashboard');
-        })->name('dashboard');
+        Route::view('/dashboard', 'admin.dashboard')->name('dashboard');
         Route::resource('products', AdminProductController::class);
         Route::resource('categories', AdminCategoryController::class)->except(['show']);
         Route::resource('requests', AdminRequestsController::class)->except(['show', 'update', 'edit']);
@@ -49,9 +48,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 
 Route::group(['prefix' => '{lang}', 'middleware' => 'setLanguage'], function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
-    Route::get(trans('catalog'), function () {
-        return view('catalog');
-    })->name('catalog');
+    Route::get(trans('about'), [PageController::class, 'about'])->name('about');
+    Route::view(trans('catalog'),'catalog')->name('catalog');
     Route::group(['prefix' => trans('categories')], function () {
         Route::get('{slug}', [SearchController::class, 'showFilteredProducts'])->name('show.filtered.products');
         Route::get('{slug}/{productSlug}', [ProductController::class, 'index'])->name('show.product');

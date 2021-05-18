@@ -28,8 +28,8 @@
             </ul>
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        Test
+                    <a href="{{ route('about', app()->getLocale()) }}" class="nav-link text-capitalize {{ Route::currentRouteName() == 'about' ? 'active' : '' }}">
+                        {{ __('about') }}
                     </a>
                 </li>
             </ul>

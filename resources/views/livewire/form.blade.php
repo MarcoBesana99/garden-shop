@@ -57,7 +57,14 @@
                 <textarea class="form-control" id="message" wire:model="message"></textarea>
                 @error('message') <div class="alert alert-danger mt-2">{{ $message }}</div> @enderror
             </div>
-            <button type="submit" class="btn custom-btn btn-block">{{ __('Send Request') }}</button>
+            <div class="form-check">
+                <div class="d-flex">
+                    <label class="form-check-label">{{ __('Accept') }}</label>
+                    <input type="checkbox" class="form-check-input" wire:model="privacy">
+                </div>
+                @error('privacy') <div class="alert alert-danger mt-2">{{ $message }}</div> @enderror
+            </div>
+            <button type="submit" class="btn custom-btn btn-block mt-3">{{ __('Send Request') }}</button>
         </div>
     </form>
     @if (session()->has('message'))

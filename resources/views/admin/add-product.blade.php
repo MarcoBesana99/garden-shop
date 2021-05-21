@@ -18,18 +18,20 @@
                         @endif
                         @if (session()->has('success'))
                             <div class="alert alert-success">
-                              {{ session()->get('success') }}
+                                {{ session()->get('success') }}
                             </div>
                         @endif
                         <form action="{{ route('admin.products.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label for="enProductName">English Name</label>
-                                <input type="text" class="form-control" value="{{ old('name:en') }}" name="name:en" id="enProductName" />
+                                <input type="text" class="form-control" value="{{ old('name:en') }}" name="name:en"
+                                    id="enProductName" />
                             </div>
                             <div class="form-group">
                                 <label for="ruProductName">Russian Name</label>
-                                <input type="text" class="form-control" value="{{ old('name:ru') }}" name="name:ru" id="ruProductName" />
+                                <input type="text" class="form-control" value="{{ old('name:ru') }}" name="name:ru"
+                                    id="ruProductName" />
                             </div>
                             <div class="form-group">
                                 <label>Add Images</label>
@@ -52,7 +54,9 @@
 @section('scripts')
     <script>
         $(document).ready(function() {
-            $('.input-images').imageUploader()
+            $('.input-images').imageUploader({
+                extensions: ['.jpg', '.jpeg', '.png', '.svg', '.JPG', '.JPEG', '.PNG', '.SVG']
+            })
             $('.alert').fadeOut(4500)
         });
 

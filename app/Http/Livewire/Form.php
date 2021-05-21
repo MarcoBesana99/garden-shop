@@ -15,13 +15,15 @@ class Form extends Component
     public $phone;
     public $company;
     public $message;
+    public $privacy;
 
     protected $rules = [
         'email' => 'required|email',
         'fname' => 'required',
         'lname' => 'required',
         'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
-        'message' => 'required'
+        'message' => 'required',
+        'privacy' => 'required'
     ];
 
     public function render()
@@ -42,7 +44,7 @@ class Form extends Component
         $request->products = json_encode($this->requestedProducts);
         $request->message = $this->message;
         $request->save();
-        $this->reset(['email', 'fname', 'lname', 'company', 'phone', 'requestedProducts', 'message']);
+        $this->reset(['email', 'fname', 'lname', 'company', 'phone', 'requestedProducts', 'message', 'privacy']);
 
         session()->flash('message', __('Your request have been sent successfully'));
     }

@@ -51,6 +51,7 @@
                         @endforeach
                     </select>
                 </li>
+                <i class="united states flag"></i>
             </ul>
         </div>
     </div>

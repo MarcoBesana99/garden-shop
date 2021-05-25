@@ -3,7 +3,7 @@
         <div class="form-header">
             <h4 class="font-weight-bold text-center">{{ __('Get a quote') }}</h4>
         </div>
-        <div class="form-body">
+        <div class="form-body p-4">
             <div>
                 <label for="email">{{ __('Email address') }}*</label>
                 <input type="text" class="form-control" id="email" wire:model="email">

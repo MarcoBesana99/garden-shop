@@ -257,9 +257,6 @@ h6 {
   & form {
     background-color: white;
     height: 100%;
-    & .form-body {
-      padding: 1.5rem;
-    }
   }
   & label {
     font-weight: bold;
@@ -306,4 +303,7 @@ h6 {
 }
 .owl-dot span {
   background-color: rgba(49, 155, 79, 0.50) !important;
+}
+footer {
+  background-color: #21243d;
 }

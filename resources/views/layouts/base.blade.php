@@ -32,6 +32,8 @@
         <main>
             @yield('content')
         </main>
+
+        <x-footer />
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>

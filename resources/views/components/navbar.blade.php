@@ -32,6 +32,11 @@
                         {{ __('about') }}
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('contact', app()->getLocale()) }}" class="nav-link text-capitalize {{ Route::currentRouteName() == 'contact' ? 'active' : '' }}">
+                        {{ __('contact') }}
+                    </a>
+                </li>
             </ul>
 
             <!-- Right Side Of Navbar -->

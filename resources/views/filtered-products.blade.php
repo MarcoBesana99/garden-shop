@@ -15,7 +15,7 @@
             </div>
         </div>
     </div>
-    <div class="rellax" data-rellax-speed="2" style="background-color: white">
+    <div class="bg-white position-relative">
         <div class="container p-4">
             <h2 class="font-weight-bold mt-3 mb-5 page-title text-capitalize">{{ __('what we offer') }}</h2>
             <div class="row catalog-filter">

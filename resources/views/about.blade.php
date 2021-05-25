@@ -14,9 +14,29 @@
             </div>
         </div>
     </div>
-    <div class="rellax" data-rellax-speed="2" style="background-color: white">
+    <div class="bg-white position-relative">
         <div class="container p-4">
-          
+            <h2 class="font-weight-bold mt-3 mb-5 page-title text-capitalize">{{ __('our story') }}</h2>
+            <p>{{ __('Eurazijos vezejas began its activities by providing transportation and logistics services in the markets of Europe, the CIS and Central Asia.') }}<br>{{ __('Currently, the company is expanding its scope of activities and one of
+                the directions is the wholesale of
+                goods for summer houses, gardens and orchards from the leading manufacturers of the Republic of Belarus.
+                The company provides its customers a full range of services in buying goods.') }}<br>
+                {{ __('Employees of the company will provide competent and expert advice, and its own fleet of cars helps to make
+                quick delivery to all European regions.') }}<br>{{ __('Close partnership with factories-manufacturers allows to expand
+                the line of supplied goods to the maximum') }}.
+                <br>{{ __('Thanks to this, today we can offer our customers') }}:
+            </p>
+            <ul style="padding-left: 15px">
+                <li>
+                    {{ __('Metal frames for home and farming') }}
+                </li>
+                <li>
+                    {{ __('Steel frames made of different-sized profile pipes (20×20, 20×40, 25×25) and of different thickness from 0.67 to 1.2') }}
+                </li>
+                <li>
+                   {{ __('Frames with connectors and all-welded') }}
+                </li>
+            </ul>
         </div>
     </div>
 @endsection

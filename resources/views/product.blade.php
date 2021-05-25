@@ -31,17 +31,19 @@
                 @foreach ($descriptions as $desc)
                     <div class="col-md-6 mt-4">
                         <h5 class="font-weight-bold">{{ $desc->title }}</h5>
-                        <p>{{ $desc->content }}</p>
+                        <p class="mt-3">{{ $desc->content }}</p>
                         @if ($desc->images_path != null)
-                                <div class="row">
-                                    @foreach (json_decode($desc->images_path) as $image)
-                                        <div class="col-md-4 col-6 mt-2">
-                                            <img class="mw-100" src="{{ asset('img/' . $image) }}"
+                            <div class="row">
+                                @foreach (json_decode($desc->images_path) as $image)
+                                    <div class="col-md-7 col-6 mt-2">
+                                        <a href="{{ asset('img/descriptions/' . $image) }}" data-lightbox="$desc->title">
+                                            <img class="mw-100" src="{{ asset('img/descriptions/' . $image) }}"
                                                 alt="{{ $desc->title }}">
-                                        </div>
-                                    @endforeach
-                                </div>
-                            @endif
+                                        </a>
+                                    </div>
+                                @endforeach
+                            </div>
+                        @endif
                     </div>
                 @endforeach
             </div>

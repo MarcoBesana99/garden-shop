@@ -3,3 +3,4 @@ require('./bootstrap');
 require('./image-uploader.min.js');
 require('./jquery.dropdown.min.js');
 require('./owl.carousel.min.js');
+require('lightbox2/dist/js/lightbox.min.js');

@@ -5,7 +5,7 @@
         </div>
         <div class="form-body p-4">
             <div>
-                <label for="email">{{ __('Email address') }}*</label>
+                <label for="email">{{ __('Email Address') }}*</label>
                 <input type="text" class="form-control" id="email" wire:model="email">
                 @error('email') <div class="text-danger mt-2">{{ $message }}</div> @enderror
             </div>
@@ -77,7 +77,7 @@
     <script>
         $('#products').dropdown({
             multipleMode: 'label',
-            input: '<input type="text" placeholder="Search">',
+            input: '<input type="text" placeholder="{{ __('Search') }}">',
             searchNoData: '<li style="color:#ddd">No Results</li>',
             //on change populate selected products and pass it to backend
             choice: () => {

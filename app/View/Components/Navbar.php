@@ -40,9 +40,9 @@ class Navbar extends Component
                 }
             }
             $urls[$index]['locale'] = $locale;
-            $urls[$index]['url'] = '/' . implode('/', ${$locale . 'Segments'});;
+            $urls[$index]['url'] = '/' . implode('/', ${$locale . 'Segments'});
         }
-        
+
         return view('components.navbar', compact('urls'));
     }
 }

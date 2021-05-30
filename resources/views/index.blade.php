@@ -73,8 +73,29 @@
         <div id="formSection">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-7">
-    
+                    <div class="col-lg-7 mb-4">
+                        <h2 class="font-weight-bold mb-2 text-white text-center mt-4 mb-3">Our latest products</h2>
+                        <div class="owl-carousel owl-theme">
+                            @foreach ($latestProducts as $product)
+                                <div>
+                                    <a class="text-decoration-none"
+                                        href="{{ route('show.product', [app()->getLocale(), $product->category->slug, $product->slug]) }}">
+                                        <h4 class="text-white mb-3 text-center font-weight-bold">{{ $product->name }}
+                                        </h4>
+                                    </a>
+                                    <a
+                                        href="{{ route('show.product', [app()->getLocale(), $product->category->slug, $product->slug]) }}">
+                                        <img style="width: 60%" class="mr-auto ml-auto"
+                                            src="{{ asset('img/' . json_decode($product->images_path)[0]) }}"
+                                            alt="{{ $product->name }}">
+                                    </a>
+                                </div>
+                            @endforeach
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <a href="{{ route('catalog', app()->getLocale()) }}" class="mt-1 btn custom-btn btn-block"
+                                style="width: 60%; background: #21243d !important">{{ __('Our catalog') }}</a>
+                        </div>
                     </div>
                     <div class="col-lg-5">
                         <livewire:form />
@@ -100,6 +121,27 @@
                     form.submit()
                 }
             })
+        });
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 30,
+            responsiveClass: true,
+            dots: true,
+            center: true,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                600: {
+                    items: 1,
+                },
+                1000: {
+                    items: 1,
+                }
+            }
         });
 
     </script>

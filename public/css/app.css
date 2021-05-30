@@ -10347,6 +10347,7 @@ footer {
   width: 100%;
   z-index: 99;
   padding: 0 !important;
+  border-top: 2px solid #24A148;
 }
 .js-cookie-consent div {
   padding: 0 !important;

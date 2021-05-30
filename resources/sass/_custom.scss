@@ -301,6 +301,14 @@ h6 {
 .owl-dot.active span {
   background-color: $main-green !important;
 }
+.owl-last-products {
+  & .owl-dot.active span {
+    background-color: #21243d !important;
+  }
+  & .owl-dot span {
+    background-color: rgba(33,36,61,0.5) !important;
+  }
+}
 .owl-dot span {
   background-color: rgba(49, 155, 79, 0.5) !important;
 }

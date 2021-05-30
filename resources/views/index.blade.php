@@ -75,7 +75,7 @@
                 <div class="row">
                     <div class="col-lg-7 mb-4">
                         <h2 class="font-weight-bold mb-2 text-white text-center mt-4 mb-3">Our latest products</h2>
-                        <div class="owl-carousel owl-theme">
+                        <div class="owl-carousel owl-theme owl-last-products">
                             @foreach ($latestProducts as $product)
                                 <div>
                                     <a class="text-decoration-none"

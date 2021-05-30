@@ -302,8 +302,38 @@ h6 {
   background-color: $main-green !important;
 }
 .owl-dot span {
-  background-color: rgba(49, 155, 79, 0.50) !important;
+  background-color: rgba(49, 155, 79, 0.5) !important;
 }
 footer {
   background-color: #21243d;
+}
+
+.js-cookie-consent {
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  width: 100%;
+  z-index: 99;
+  padding: 0 !important;
+  & div {
+    padding: 0 !important;
+  }
+  & a {
+    color: $main-green;
+    cursor: pointer;
+  }
+  & .flex {
+    display: flex;
+    justify-content: center;
+    & div {
+      display: flex;
+      justify-content: center;
+      margin-top: 0.5rem;
+      & p {
+        margin-top: 0.5rem;
+        margin-left:  0 !important;
+        text-align: center;
+      }
+    }
+  }
 }

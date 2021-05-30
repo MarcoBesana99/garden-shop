@@ -10339,3 +10339,33 @@ h6 {
 footer {
   background-color: #21243d;
 }
+
+.js-cookie-consent {
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  width: 100%;
+  z-index: 99;
+  padding: 0 !important;
+}
+.js-cookie-consent div {
+  padding: 0 !important;
+}
+.js-cookie-consent a {
+  color: #24A148;
+  cursor: pointer;
+}
+.js-cookie-consent .flex {
+  display: flex;
+  justify-content: center;
+}
+.js-cookie-consent .flex div {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+.js-cookie-consent .flex div p {
+  margin-top: 0.5rem;
+  margin-left: 0 !important;
+  text-align: center;
+}

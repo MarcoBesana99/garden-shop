@@ -41,7 +41,7 @@
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                     <!-- Content -->
-                    <h6 class="text-uppercase fw-bold mb-4 font-weight-bold">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">
                         {{ __('Eurazijos agro') }}
                     </h6>
                     <p>
@@ -56,7 +56,7 @@
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                     <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">
+                    <h6 class="text-uppercase font-weight-bold mb-4">
                         {{ __('pages') }}
                     </h6>
                     <p>
@@ -84,7 +84,7 @@
                 <!-- Grid column -->
                 <div class="col-md-6 col-lg-6 col-xl-7 mx-auto mb-md-0 mb-4">
                     <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">
+                    <h6 class="text-uppercase font-weight-bold mb-4">
                         {{ __('contact') }}
                     </h6>
                     <div class="row">

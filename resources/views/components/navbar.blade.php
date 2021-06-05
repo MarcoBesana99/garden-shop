@@ -37,6 +37,11 @@
                         {{ __('contact') }}
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('privacy', app()->getLocale()) }}" class="nav-link text-capitalize {{ Route::currentRouteName() == 'privacy' ? 'active' : '' }}">
+                        {{ __('privacy policy') }}
+                    </a>
+                </li>
             </ul>
 
             <!-- Right Side Of Navbar -->

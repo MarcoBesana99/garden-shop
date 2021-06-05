@@ -50,6 +50,7 @@ Route::group(['prefix' => '{lang}', 'middleware' => 'setLanguage'], function () 
     Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get(trans('about'), [PageController::class, 'about'])->name('about');
     Route::get(trans('contact'), [PageController::class, 'contact'])->name('contact');
+    Route::get(trans('privacy-policy'), [PageController::class, 'privacy'])->name('privacy');
     Route::view(trans('catalog'),'catalog')->name('catalog');
     Route::group(['prefix' => trans('categories')], function () {
         Route::get('{slug}', [SearchController::class, 'showFilteredProducts'])->name('show.filtered.products');

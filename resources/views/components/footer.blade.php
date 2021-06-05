@@ -76,7 +76,7 @@
                             class="text-reset text-capitalize">{{ __('contact') }}</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset text-capitalize">{{ __('privacy policy') }}</a>
+                        <a href="{{ route('privacy', app()->getLocale()) }}" class="text-reset text-capitalize">{{ __('privacy policy') }}</a>
                     </p>
                 </div>
                 <!-- Grid column -->

@@ -41,8 +41,8 @@
         <div id="benefitsRow">
             <div class="container row">
                 <div class="col-md-6 col-lg-3 text-center">
-                    <h4 class="font-weight-bold">{{ __('Diversification of products') }}</h4>
-                    <i class="fas fa-hand-holding-usd benefit-icon mt-3"></i>
+                    <h4 class="font-weight-bold">{{ __('Diversification') }}</h4>
+                    <i class="fas fa-clipboard-list benefit-icon mt-3"></i>
                     <p class="mt-3">
                         {{ __('We offer a wide range of goods for summer houses, yards (greenhouses, mini greenhouses, garden arbors, summer garden showers and other goods in bulk) that can be viewed in the "Catalog" section.') }}
                     </p>
@@ -65,7 +65,7 @@
                     <h4 class="font-weight-bold">{{ __('Good Prices') }}</h4>
                     <i class="fas fa-hand-holding-usd benefit-icon mt-3"></i>
                     <p class="mt-3">
-                        {{ __('we offer a wide range of goods for dacha, garden and vegetable garden. With us you can buy greenhouses, mini greenhouses, garden arbors, summer garden showers and other goods in bulk and at bargain prices.') }}
+                        {{ __('We offer a wide range of goods for dacha, garden and vegetable garden. With us you can buy greenhouses, mini greenhouses, garden arbors, summer garden showers and other goods in bulk and at bargain prices.') }}
                     </p>
                 </div>
             </div>
@@ -74,7 +74,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7 mb-4">
-                        <h2 class="font-weight-bold mb-2 text-white text-center mt-4 mb-3">Our latest products</h2>
+                        <h2 class="font-weight-bold mb-2 text-white text-center mt-4 mb-3">{{ __('Our latest products') }}</h2>
                         <div class="owl-carousel owl-theme owl-last-products">
                             @foreach ($latestProducts as $product)
                                 <div>

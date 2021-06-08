@@ -10151,6 +10151,11 @@ h6 {
   z-index: 2;
   position: relative;
 }
+@media screen and (max-width: 767px) {
+  #benefits .container div:not(:first-of-type) {
+    margin-top: 1.5rem;
+  }
+}
 #benefits .container .search {
   color: white;
   background-color: #21243d;

@@ -53,6 +53,9 @@ h6 {
 
   & .subtitle {
     font-size: 18px;
+    @media screen and (max-width: 767px) {
+      display: grid;
+    }
   }
 }
 
@@ -120,6 +123,11 @@ h6 {
   & .container {
     z-index: 2;
     position: relative;
+    @media screen and (max-width: 767px) {
+      & div:not(:first-of-type) {
+        margin-top: 1.5rem;
+      }
+    }
     & .search {
       color: white;
       background-color: #21243d;

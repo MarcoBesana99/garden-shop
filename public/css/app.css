@@ -10081,6 +10081,11 @@ h6 {
 #heroContainer .subtitle {
   font-size: 18px;
 }
+@media screen and (max-width: 767px) {
+  #heroContainer .subtitle {
+    display: grid;
+  }
+}
 
 .top-section {
   background-image: url("/img/joanjo-puertos-hzelKVRXSJQ-unsplash.jpg");
@@ -10145,6 +10150,11 @@ h6 {
 #benefits .container {
   z-index: 2;
   position: relative;
+}
+@media screen and (max-width: 767px) {
+  #benefits .container div:not(:first-of-type) {
+    margin-top: 1.5rem;
+  }
 }
 #benefits .container .search {
   color: white;

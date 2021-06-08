@@ -29,7 +29,7 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a href="{{ route('about', app()->getLocale()) }}" class="nav-link text-capitalize {{ Route::currentRouteName() == 'about' ? 'active' : '' }}">
-                        {{ __('about') }}
+                        {{ __('About') }}
                     </a>
                 </li>
                 <li class="nav-item">

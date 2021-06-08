@@ -41,10 +41,12 @@
         $(function() {
             //parallax
             new Rellax('.rellax');
-            $(document).scroll(() => {
-                let $nav = $("#navbarMenu");
-                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-            });
+            if ($(window).width() > 767) {
+                $(document).scroll(() => {
+                    let $nav = $("#navbarMenu");
+                    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+                });
+            }
         })
 
     </script>

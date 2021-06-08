@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  outline: none;
+  box-shadow: none;
+
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+body,
+#app {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: $main-green;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+.delete-button {
+  color: red;
+  font-size: 18px;
+}
+
+.edit-btn {
+  color: blue;
+  font-size: 18px;
+}
+
+#heroContainer {
+  background-image: url("/img/joanjo-puertos-hzelKVRXSJQ-unsplash.jpg");
+  background-size: cover;
+  height: 100vh;
+
+  & .subtitle {
+    font-size: 18px;
+  }
+}
+
+.top-section {
+  & .overlay {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+  }
+  background-image: url("/img/joanjo-puertos-hzelKVRXSJQ-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+  pointer-events: none;
+}
+
+#hero,
+.top-section__container {
+  z-index: 3;
+  color: white;
+}
+
+#navbarMenu {
+  background-color: transparent;
+  &.scrolled {
+    background-color: $main-green !important;
+  }
+}
+
+.custom-btn {
+  color: #fff;
+  background-color: $main-green;
+  border-color: $main-green;
+  &:hover {
+    color: white;
+    background-color: #006400;
+    border-color: #006400;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+}
+
+.navbar {
+  select {
+    width: auto !important;
+  }
+}
+
+#benefits {
+  & .search-container {
+    margin-top: 40px;
+  }
+  & .container {
+    z-index: 2;
+    position: relative;
+    & .search {
+      color: white;
+      background-color: #21243d;
+      & h5 {
+        @media screen and (max-width: 767px) {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+  & #benefitsRow {
+    background-color: $main-green;
+    margin-top: -40px;
+    padding: 5.5rem 2rem 2rem 2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+
+    & .benefit-icon {
+      font-size: 50px;
+    }
+  }
+}
+
+.form-header {
+  color: white;
+  background-color: #21243d;
+  padding: 1.5rem;
+}
+.catalog-controls {
+  text-align: right;
+}
+.catalog-controls ul li {
+  list-style: none;
+  display: inline-block;
+  font-size: 14px;
+  color: #666666;
+  font-weight: 500;
+  margin-right: 35px;
+  position: relative;
+  cursor: pointer;
+  text-transform: capitalize;
+
+  &:hover {
+    border-bottom: 3px solid $main-green;
+    color: $main-green;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+}
+.mixitup-control-active {
+  border-bottom: 3px solid $main-green;
+  color: $main-green !important;
+}
+.catalog-controls ul li:after {
+  position: absolute;
+  right: -22px;
+  top: -1px;
+  content: "|";
+  color: #b1b0b0;
+}
+.catalog-controls ul li:last-child {
+  margin-right: 0;
+}
+.catalog-controls ul li:last-child:after {
+  display: none;
+}
+.catalog-item {
+  margin-bottom: 40px;
+  position: relative;
+  &:hover {
+    transform: scale(1.05);
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+}
+.catalog-item .pi-pic {
+  height: 290px;
+  position: relative;
+}
+.catalog-item .pi-text {
+  position: absolute;
+  background-color: rgba(36, 161, 72, 0.85);
+  padding: 12px;
+  width: 100%;
+  bottom: 0;
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+.catalog-item a {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  & h5 {
+    font-weight: 400;
+  }
+  &:hover {
+    text-decoration: none;
+    & .pi-text {
+      height: 100%;
+      transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.25rem;
+      & h5 {
+        font-size: 30px;
+      }
+    }
+  }
+}
+.set-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.breadcrumbs {
+  & span {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    & i {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 13px;
+    }
+    & a {
+      color: rgba(255, 255, 255, 0.7) !important;
+      &:hover,
+      &:focus {
+        color: $main-green !important;
+        text-decoration: none !important;
+      }
+    }
+  }
+}
+.bread {
+  font-size: 50px;
+  line-height: 1.1;
+  font-weight: 400;
+}
+#formSection {
+  position: relative;
+  & form {
+    background-color: white;
+    height: 100%;
+  }
+  & label {
+    font-weight: bold;
+  }
+  &:before {
+    content: "";
+    background-image: url("/img/bg-form.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+  }
+}
+.page-title {
+  overflow: hidden;
+  text-align: center;
+  color: $main-green;
+  &:before,
+  &:after {
+    background-color: $main-green;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 10%;
+  }
+  &:before {
+    right: 0.5em;
+    margin-left: -50%;
+  }
+  &:after {
+    left: 0.5em;
+    margin-right: -50%;
+  }
+}
+.owl-dot.active span {
+  background-color: $main-green !important;
+}
+.owl-last-products {
+  & .owl-dot.active span {
+    background-color: #21243d !important;
+  }
+  & .owl-dot span {
+    background-color: rgba(33,36,61,0.5) !important;
+  }
+}
+.owl-dot span {
+  background-color: rgba(49, 155, 79, 0.5) !important;
+}
+footer {
+  background-color: #21243d;
+}
+
+.js-cookie-consent {
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  width: 100%;
+  z-index: 99;
+  padding: 0 !important;
+  border-top: 2px solid $main-green;
+  & div {
+    padding: 0 !important;
+  }
+  & a {
+    color: $main-green;
+    cursor: pointer;
+  }
+  & .flex {
+    display: flex;
+    justify-content: center;
+    & div {
+      display: flex;
+      justify-content: center;
+      margin-top: 0.5rem;
+      & p {
+        margin-top: 0.5rem;
+        margin-left:  0 !important;
+        text-align: center;
+      }
+    }
+  }
+}

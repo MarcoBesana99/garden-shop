@@ -7,7 +7,7 @@
                 <div class="h-100 col-md-7 d-flex flex-column justify-content-center">
                     <h1 class="font-weight-bold">
                         {{ __('For those, looking for the best solutions of their gardens and yards') }}</h1>
-                    <div class="mt-4 subtitle">{{ __('Wholesale in bulk quantities from 150 units') }}</div>
+                    <div class="mt-4 subtitle"><span>{{ __('Wholesale in bulk quantities') }} </span><span> {{ __('from 150 units') }}</span></div>
                     <div>
                         <button class="btn custom-btn mt-4">
                             {{ __('Get a quote') }}

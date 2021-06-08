@@ -10081,6 +10081,11 @@ h6 {
 #heroContainer .subtitle {
   font-size: 18px;
 }
+@media screen and (max-width: 767px) {
+  #heroContainer .subtitle {
+    display: grid;
+  }
+}
 
 .top-section {
   background-image: url("/img/joanjo-puertos-hzelKVRXSJQ-unsplash.jpg");

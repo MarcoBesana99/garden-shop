@@ -25,7 +25,9 @@ use Illuminate\Support\Facades\Route;
 Route::redirect('/', '/en', 301);
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
-    Auth::routes();
+    Auth::routes([
+        'register' => false
+    ]);
     Route::group(['middleware' => 'auth'], function () {
         Route::view('/dashboard', 'admin.dashboard')->name('dashboard');
         Route::resource('products', AdminProductController::class);

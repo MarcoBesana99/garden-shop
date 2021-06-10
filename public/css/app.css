@@ -10418,3 +10418,9 @@ footer {
     border-top: 1px solid #24A148;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .mobile-margin {
+    margin-top: 1rem;
+  }
+}

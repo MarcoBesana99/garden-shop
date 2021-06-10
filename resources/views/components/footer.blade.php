@@ -56,7 +56,7 @@
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto">
                     <!-- Links -->
-                    <h6 class="text-uppercase font-weight-bold mb-4 mt-1">
+                    <h6 class="text-uppercase font-weight-bold mb-4 mt-3">
                         {{ __('pages') }}
                     </h6>
                     <p>
@@ -84,7 +84,7 @@
                 <!-- Grid column -->
                 <div class="col-md-6 col-lg-6 col-xl-7 mx-auto mb-md-0">
                     <!-- Links -->
-                    <h6 class="text-uppercase font-weight-bold mb-4 mt-2">
+                    <h6 class="text-uppercase font-weight-bold mb-4 mt-3">
                         {{ __('contact') }}
                     </h6>
                     <div class="row">
@@ -100,7 +100,7 @@
                         <hr class="footer-divider" style="width: 25% !important">
                         <div class="col-md-6">
                             <p>
-                                <i class="fas fa-envelope me-3"></i>
+                                <i class="fas fa-envelope me-3 mobile-margin"></i>
                                 bthtatiana@gmail.com
                             </p>
                             <p><i class="fas fa-phone me-3"></i> +375 296399939</p>

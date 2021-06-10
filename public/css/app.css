@@ -10397,3 +10397,36 @@ footer {
   margin-left: 0 !important;
   text-align: center;
 }
+
+.footer-divider {
+  width: 50%;
+  background-color: #24A148;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .footer-divider {
+    display: none;
+  }
+}
+
+.copyright {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+@media screen and (min-width: 768px) {
+  .copyright {
+    border-top: 1px solid #24A148;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-margin {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .form-col {
+    margin-bottom: 2rem;
+  }
+}

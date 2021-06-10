@@ -39,7 +39,7 @@
             <!-- Grid row -->
             <div class="row mt-3">
                 <!-- Grid column -->
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto">
                     <!-- Content -->
                     <h6 class="text-uppercase mb-4 font-weight-bold">
                         {{ __('Eurazijos agro') }}
@@ -52,11 +52,11 @@
                     </p>
                 </div>
                 <!-- Grid column -->
-
+                <hr class="footer-divider">
                 <!-- Grid column -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto">
                     <!-- Links -->
-                    <h6 class="text-uppercase font-weight-bold mb-4">
+                    <h6 class="text-uppercase font-weight-bold mb-4 mobile-margin">
                         {{ __('pages') }}
                     </h6>
                     <p>
@@ -80,11 +80,11 @@
                     </p>
                 </div>
                 <!-- Grid column -->
-
+                <hr class="footer-divider">
                 <!-- Grid column -->
-                <div class="col-md-6 col-lg-6 col-xl-7 mx-auto mb-md-0 mb-4">
+                <div class="col-md-6 col-lg-6 col-xl-7 mx-auto mb-md-0">
                     <!-- Links -->
-                    <h6 class="text-uppercase font-weight-bold mb-4">
+                    <h6 class="text-uppercase font-weight-bold mb-4 mobile-margin">
                         {{ __('contact') }}
                     </h6>
                     <div class="row">
@@ -97,9 +97,10 @@
                             <p><i class="fas fa-phone me-3"></i>+370 67129929</p>
                             <p><i class="fas fa-home me-3"></i> Ukmerge Vilniaus g. 100B-45, LT-20166. Lithuania</p>
                         </div>
+                        <hr class="footer-divider" style="width: 25% !important">
                         <div class="col-md-6">
                             <p>
-                                <i class="fas fa-envelope me-3"></i>
+                                <i class="fas fa-envelope me-3 mobile-margin"></i>
                                 bthtatiana@gmail.com
                             </p>
                             <p><i class="fas fa-phone me-3"></i> +375 296399939</p>
@@ -118,7 +119,7 @@
     <!-- Section: Links  -->
 
     <!-- Copyright -->
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    <div class="text-center p-4 copyright">
         © 2021 Copyright:
         <a class="text-reset fw-bold" href="https://eurazijos-agro.com/">eurazijos-agro.com</a>
     </div>

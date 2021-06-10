@@ -56,7 +56,7 @@
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto">
                     <!-- Links -->
-                    <h6 class="text-uppercase font-weight-bold mb-4 mt-3">
+                    <h6 class="text-uppercase font-weight-bold mb-4 mobile-margin">
                         {{ __('pages') }}
                     </h6>
                     <p>
@@ -84,7 +84,7 @@
                 <!-- Grid column -->
                 <div class="col-md-6 col-lg-6 col-xl-7 mx-auto mb-md-0">
                     <!-- Links -->
-                    <h6 class="text-uppercase font-weight-bold mb-4 mt-3">
+                    <h6 class="text-uppercase font-weight-bold mb-4 mobile-margin">
                         {{ __('contact') }}
                     </h6>
                     <div class="row">

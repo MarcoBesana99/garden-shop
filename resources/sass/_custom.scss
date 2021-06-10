@@ -383,3 +383,9 @@ footer {
     margin-top: 1rem;
   }
 }
+
+.form-col {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 2rem;
+  }
+}

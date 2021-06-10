@@ -74,7 +74,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7 mb-4">
-                        <h2 class="font-weight-bold mb-2 text-white text-center mt-4 mb-3">{{ __('Our latest products') }}</h2>
+                        <h2 class="font-weight-bold mb-2 text-white text-center mt-5 mb-3">{{ __('Our latest products') }}</h2>
                         <div class="owl-carousel owl-theme owl-last-products">
                             @foreach ($latestProducts as $product)
                                 <div>
@@ -97,7 +97,7 @@
                                 style="width: 60%; background: #21243d !important">{{ __('Our catalog') }}</a>
                         </div>
                     </div>
-                    <div class="col-lg-5">
+                    <div class="col-lg-5 form-col">
                         <livewire:form />
                     </div>
                 </div>

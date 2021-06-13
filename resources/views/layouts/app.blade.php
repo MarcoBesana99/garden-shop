@@ -24,7 +24,10 @@
         crossorigin="anonymous" />
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ 'Eurazijos agro - Admin' }}</title>
+
+    <link rel="shortcut icon" type="image/png" href="{{ asset('img/seedling.png') }}"/>
+    <link href="{{ asset('img/seedling.png') }}" rel="apple-touch-icon" />
 </head>
 
 <body class="c-app">

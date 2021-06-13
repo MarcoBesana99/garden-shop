@@ -1,4 +1,7 @@
 @extends('layouts.base', ['enParam' => 'en', 'ruParam' => 'ru'])
+@section('title')
+{{ __('Greenhouses, garden showers and more.') }}
+@endsection
 @section('content')
     <div class="rellax" id="heroContainer">
         <div class="overlay"></div>

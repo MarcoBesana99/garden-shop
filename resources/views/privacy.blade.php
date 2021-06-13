@@ -1,4 +1,7 @@
 @extends('layouts.base', ['enParam' => 'en', 'ruParam' => 'ru'])
+@section('title')
+{{ __('Privacy Policy') }}
+@endsection
 @section('content')
     <div class="rellax top-section">
         <div class="overlay"></div>

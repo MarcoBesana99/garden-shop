@@ -1,4 +1,7 @@
 @extends('layouts.base', ['enParam' => $enParam, 'ruParam' => $ruParam])
+@section('title')
+{{ $categoryName }}
+@endsection
 @section('content')
     <div class="rellax top-section">
         <div class="overlay"></div>

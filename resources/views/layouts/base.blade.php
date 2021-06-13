@@ -10,7 +10,7 @@
 
     <meta name="description" content="{{ __('') }}"/>
 
-    <title>{{ config('app.name', 'Eurazijos-agro') }}</title>
+    <title>Eurazijos agro - @yield('title')</title>
 
     <link rel="shortcut icon" type="image/png" href="{{ asset('img/seedling.png') }}"/>
 

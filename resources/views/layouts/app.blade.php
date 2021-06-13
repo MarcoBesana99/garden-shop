@@ -9,6 +9,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <meta name="description" content="{{ __('') }}"/>
+
     <title>{{ config('app.name', 'Eurazijos-agro') }}</title>
 
     <!-- Fonts -->

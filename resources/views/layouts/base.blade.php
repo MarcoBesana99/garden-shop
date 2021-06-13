@@ -13,6 +13,7 @@
     <title>Eurazijos agro - @yield('title')</title>
 
     <link rel="shortcut icon" type="image/png" href="{{ asset('img/seedling.png') }}"/>
+    <link href="{{ asset('img/seedling.png') }}" rel="apple-touch-icon" />
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">

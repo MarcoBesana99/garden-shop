@@ -22,16 +22,16 @@
             <h2 class="font-weight-bold mt-3 mb-5 page-title text-capitalize">{{ __('be in touch with us') }}</h2>
             <div class="row">
                 <div class="col-lg-6">
-                    <h4>{{ __('Contact details') }}:</h4>
+                    <h3>{{ __('Contact details') }}:</h3>
                     <p class="mt-3">{{ __('UAB Eurazijos vezejas Company code 305358431') }}</p>
-                    <h6 class="font-weight-bold">{{ __('Lithuanian office') }}:</h6>
+                    <h4 class="font-weight-bold office">{{ __('Lithuanian office') }}:</h4>
                     <ul class="mt-3" style="padding-left: 15px">
                         <li>Ukmerge Vilniaus g. 100B-45, LT-20166</li>
                         <li>+370 60780165</li>
                         <li>+370 67129929</li>
                         <li>eurazijos@mail.ru</li>
                     </ul>
-                    <h6 class="font-weight-bold">{{ __('Office in Belarus') }}:</h6>
+                    <h4 class="font-weight-bold">{{ __('Office in Belarus') }}:</h4>
                     <ul class="mt-3" style="padding-left: 15px">
                         <li>{{ __('18b Dzerzhinskogo St., Tsnyanka, Minsk district') }}</li>
                         <li>+375 296399939</li>

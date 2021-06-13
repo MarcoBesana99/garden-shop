@@ -24,7 +24,7 @@
         <div class="container search-container">
             <div class="row p-4 rounded justify-content-center align-content-center search">
                 <div class="col-12 col-md-6 d-flex align-items-center">
-                    <h5 class="font-weight-bold">{{ __('Browse our products') }}</h5>
+                    <h4 class="font-weight-bold">{{ __('Browse our products') }}</h4>
                 </div>
                 <div class="col-12 col-md-6">
                     <form action="" method="GET" class="d-flex" id="filterForm">
@@ -44,28 +44,28 @@
         <div id="benefitsRow">
             <div class="container row">
                 <div class="col-md-6 col-lg-3 text-center">
-                    <h4 class="font-weight-bold">{{ __('Diversification') }}</h4>
+                    <h3 class="font-weight-bold">{{ __('Diversification') }}</h3>
                     <i class="fas fa-clipboard-list benefit-icon mt-3"></i>
                     <p class="mt-3">
                         {{ __('We offer a wide range of goods for summer houses, yards (greenhouses, mini greenhouses, garden arbors, summer garden showers and other goods in bulk) that can be viewed in the "Catalog" section.') }}
                     </p>
                 </div>
                 <div class="col-md-6 col-lg-3 text-center">
-                    <h4 class="font-weight-bold">{{ __('Individual Service') }}</h4>
+                    <h3 class="font-weight-bold">{{ __('Individual Service') }}</h3>
                     <i class="far fa-handshake benefit-icon mt-3"></i>
                     <p class="mt-3">
                         {{ __('Individual approach and selection of goods based on preferences of each market in Europe, Russia and Belarus.') }}
                     </p>
                 </div>
                 <div class="col-md-6 col-lg-3 text-center">
-                    <h4 class="font-weight-bold">{{ __('High Quality') }}</h4>
+                    <h3 class="font-weight-bold">{{ __('High Quality') }}</h3>
                     <i class="far fa-check-circle benefit-icon mt-3"></i>
                     <p class="mt-3">
                         {{ __('All goods are manufactured using unique and modern technologies from quality raw materials and undergo quality control at all stages of production.') }}
                     </p>
                 </div>
                 <div class="col-md-6 col-lg-3 text-center">
-                    <h4 class="font-weight-bold">{{ __('Good Prices') }}</h4>
+                    <h3 class="font-weight-bold">{{ __('Good Prices') }}</h3>
                     <i class="fas fa-hand-holding-usd benefit-icon mt-3"></i>
                     <p class="mt-3">
                         {{ __('We offer a wide range of goods for dacha, garden and vegetable garden. With us you can buy greenhouses, mini greenhouses, garden arbors, summer garden showers and other goods in bulk and at bargain prices.') }}
@@ -83,8 +83,8 @@
                                 <div>
                                     <a class="text-decoration-none"
                                         href="{{ route('show.product', [app()->getLocale(), $product->category->slug, $product->slug]) }}">
-                                        <h4 class="text-white mb-3 text-center font-weight-bold">{{ $product->name }}
-                                        </h4>
+                                        <h3 class="text-white mb-3 text-center font-weight-bold">{{ $product->name }}
+                                        </h3>
                                     </a>
                                     <a
                                         href="{{ route('show.product', [app()->getLocale(), $product->category->slug, $product->slug]) }}">

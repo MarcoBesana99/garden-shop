@@ -31,7 +31,7 @@
                                     data-setbg="{{ asset('img/' . json_decode($product->images_path)[0]) }}">
                                 </div>
                                 <div class="pi-text">
-                                    <h5>{{ $product->name }}</h5>
+                                    <h3>{{ $product->name }}</h3>
                                 </div>
                             </a>
                         </div>

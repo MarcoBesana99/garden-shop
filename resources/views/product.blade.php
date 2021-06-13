@@ -33,7 +33,7 @@
             <div class="row">
                 @foreach ($descriptions as $desc)
                     <div class="col-md-6 mt-4">
-                        <h5 class="font-weight-bold">{{ $desc->title }}</h5>
+                        <h3 class="font-weight-bold">{{ $desc->title }}</h3>
                         <p class="mt-3">{{ $desc->content }}</p>
                         @if ($desc->images_path != null)
                             <div class="row">

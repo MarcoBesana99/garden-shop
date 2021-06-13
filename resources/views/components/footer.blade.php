@@ -41,9 +41,9 @@
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto">
                     <!-- Content -->
-                    <h6 class="text-uppercase mb-4 font-weight-bold">
+                    <h5 class="text-uppercase mb-4 font-weight-bold">
                         {{ __('Eurazijos agro') }}
-                    </h6>
+                    </h5>
                     <p>
                         {{ __('For those, looking for the best solutions of their gardens and yards') }}.
                     </p>
@@ -56,9 +56,9 @@
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto">
                     <!-- Links -->
-                    <h6 class="text-uppercase font-weight-bold mb-4 mobile-margin">
+                    <h5 class="text-uppercase font-weight-bold mb-4 mobile-margin">
                         {{ __('pages') }}
-                    </h6>
+                    </h5>
                     <p>
                         <a href="{{ route('home', app()->getLocale()) }}"
                             class="text-reset text-capitalize">{{ __('home') }}</a>
@@ -84,9 +84,9 @@
                 <!-- Grid column -->
                 <div class="col-md-6 col-lg-6 col-xl-7 mx-auto mb-md-0">
                     <!-- Links -->
-                    <h6 class="text-uppercase font-weight-bold mb-4 mobile-margin">
+                    <h5 class="text-uppercase font-weight-bold mb-4 mobile-margin">
                         {{ __('contact') }}
-                    </h6>
+                    </h5>
                     <div class="row">
                         <div class="col-md-6">
                             <p>

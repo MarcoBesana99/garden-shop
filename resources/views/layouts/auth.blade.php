@@ -20,7 +20,10 @@
     <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui/dist/css/coreui.min.css" crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ 'Eurazijos agro - Admin' }}</title>
+
+    <link rel="shortcut icon" type="image/png" href="{{ asset('img/seedling.png') }}"/>
+    <link href="{{ asset('img/seedling.png') }}" rel="apple-touch-icon" />
 </head>
 
 <body class="c-app flex-row align-items-center">

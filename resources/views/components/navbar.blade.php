@@ -47,7 +47,7 @@
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <select class="form-control" onchange="location = this.value">
+                    <select class="form-control lang-selector" onchange="location = this.value">
                         @foreach ($urls as $url)
                             <option value="{{ $url['url'] }}"
                                 {{ app()->getLocale() == $url['locale'] ? 'selected' : '' }}>
@@ -56,7 +56,6 @@
                         @endforeach
                     </select>
                 </li>
-                <i class="united states flag"></i>
             </ul>
         </div>
     </div>

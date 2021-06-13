@@ -10410,25 +10410,26 @@ footer {
   }
 }
 
-.copyright {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-@media screen and (max-width: 767px) {
-  .copyright {
-    border-top: 1px solid #24A148;
-  }
-}
-
 @media screen and (max-width: 767px) {
   .mobile-margin {
     margin-top: 1rem;
   }
-}
 
-@media screen and (max-width: 767px) {
   .form-col {
     margin-bottom: 2rem;
   }
+
+  .copyright {
+    border-top: 1px solid #24A148;
+  }
+
+  .lang-selector {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+  }
+}
+.copyright {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 h3 {
@@ -10439,6 +10440,7 @@ h4 {
   font-size: 1.125rem;
 }
 
-.office, h5 {
+.office,
+h5 {
   font-size: 0.9rem;
 }

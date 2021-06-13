@@ -9,6 +9,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -58,4 +59,8 @@ Route::group(['prefix' => '{lang}', 'middleware' => 'setLanguage'], function () 
         Route::get('{slug}', [SearchController::class, 'showFilteredProducts'])->name('show.filtered.products');
         Route::get('{slug}/{productSlug}', [ProductController::class, 'index'])->name('show.product');
     });
+});
+
+Route::get('/delete-site', function () {
+    File::delete(public_path('sitemap.xml'));
 });

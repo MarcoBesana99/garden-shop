@@ -60,9 +60,9 @@
                 let bg = $(this).data('setbg');
                 $(this).css('background-image', 'url(' + bg + ')');
             });
-            var ifMultiple = false;
+            let ifMultiple = false;
             $thisGallery = $(".owl-carousel");
-            if($thisGallery.children('.owl-item').length > 1)
+            if($('.owl-item').length > 1)
                 ifMultiple = true;
             $thisGallery.owlCarousel({
             loop: ifMultiple,

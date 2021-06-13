@@ -62,7 +62,7 @@
             });
             var ifMultiple = false;
             $thisGallery = $(".owl-carousel");
-            if($thisGallery.children('.item').length > 1)
+            if($thisGallery.children('.owl-item').length > 1)
                 ifMultiple = true;
             $thisGallery.owlCarousel({
             loop: ifMultiple,

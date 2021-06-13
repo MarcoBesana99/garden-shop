@@ -60,26 +60,30 @@
                 let bg = $(this).data('setbg');
                 $(this).css('background-image', 'url(' + bg + ')');
             });
-            $(".owl-carousel").owlCarousel({
-                loop: false,
-                margin: 10,
-                responsiveClass: true,
-                dots: true,
-                center: true,
-                autoplay: true,
-                autoplayTimeout: 2000,
-                autoplayHoverPause: true,
-                responsive: {
-                    0: {
-                        items: 1,
-                    },
-                    600: {
-                        items: 2,
-                    },
-                    1000: {
-                        items: 3,
-                    }
+            var ifMultiple = false;
+            $thisGallery = $(".owl-carousel");
+            if($thisGallery.children('.item').length > 1)
+                ifMultiple = true;
+            $thisGallery.owlCarousel({
+            loop: ifMultiple,
+            margin: 10,
+            responsiveClass: true,
+            dots: true,
+            center: true,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                600: {
+                    items: 2,
+                },
+                1000: {
+                    items: 3,
                 }
+            }
             });
         })
 

@@ -64,7 +64,9 @@
 @section('scripts')
     <script>
         $(document).ready(function() {
-            $('.input-images').imageUploader(extensions: ['.jpg', '.jpeg', '.png', '.svg', '.JPG', '.JPEG', '.PNG', '.SVG'])
+            $('.input-images').imageUploader({
+                extensions: ['.jpg', '.jpeg', '.png', '.svg', '.JPG', '.JPEG', '.PNG', '.SVG']
+                })
             $('.alert').fadeOut(4500)
         });
     </script>

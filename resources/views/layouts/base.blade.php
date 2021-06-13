@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <meta name="description" content="{{ __('Eurazijos agro is a company specialized in delivering greenhouses, mini greenhouses, garden arbors, summer garden showers and other goods to his customers from 150 units.') }}"/>
+    <meta name="description" content="{{ __('Eurazijos agro is a company specialized in delivering greenhouses, mini greenhouses, garden arbors, summer garden showers and other goods from 150 units.') }}"/>
 
     <title>Eurazijos agro - @yield('title')</title>
 

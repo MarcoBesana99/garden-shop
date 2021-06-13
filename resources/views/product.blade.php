@@ -38,7 +38,7 @@
                         @if ($desc->images_path != null)
                             <div class="row">
                                 @foreach (json_decode($desc->images_path) as $image)
-                                    <div class="col-md-7 col-6 mt-2">
+                                    <div class="col-lg-7 col-md-9 col-10 mt-2">
                                         <a href="{{ asset('img/descriptions/' . $image) }}" data-lightbox="$desc->title">
                                             <img class="mw-100" src="{{ asset('img/descriptions/' . $image) }}"
                                                 alt="{{ $desc->title }}">

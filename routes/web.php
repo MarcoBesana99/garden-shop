@@ -25,6 +25,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::redirect('/', '/en', 301);
 
+Route::get('/delete-site', function () {
+    File::delete(public_path('sitemap.xml'));
+});
+
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     Auth::routes([
         'register' => false
@@ -61,6 +65,3 @@ Route::group(['prefix' => '{lang}', 'middleware' => 'setLanguage'], function () 
     });
 });
 
-Route::get('/delete-site', function () {
-    File::delete(public_path('sitemap.xml'));
-});

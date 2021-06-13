@@ -9,7 +9,6 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,10 +23,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::redirect('/', '/en', 301);
-
-Route::get('/delete-site', function () {
-    File::delete(public_path('sitemap.xml'));
-});
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     Auth::routes([

@@ -96,7 +96,7 @@
                             @endforeach
                         </div>
                         <div class="d-flex justify-content-center">
-                            <a href="{{ route('catalog', app()->getLocale()) }}" class="mt-1 btn custom-btn btn-block"
+                            <a href="{{ route('catalog', app()->getLocale()) }}" class="mt-3 btn custom-btn btn-block"
                                 style="width: 60%; background: #21243d !important">{{ __('Our catalog') }}</a>
                         </div>
                     </div>

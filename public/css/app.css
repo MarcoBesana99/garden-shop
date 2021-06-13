@@ -10174,7 +10174,7 @@ h6 {
   justify-content: center;
 }
 #benefits #benefitsRow .benefit-icon {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .form-header {
@@ -10429,4 +10429,16 @@ footer {
   .form-col {
     margin-bottom: 2rem;
   }
+}
+
+h3 {
+  font-size: 1.35rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+.office, h5 {
+  font-size: 0.9rem;
 }

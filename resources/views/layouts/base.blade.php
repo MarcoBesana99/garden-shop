@@ -8,7 +8,12 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <meta name="description" content="{{ __('') }}"/>
+
+    <title>Eurazijos agro - @yield('title')</title>
+
+    <link rel="shortcut icon" type="image/png" href="{{ asset('img/seedling.png') }}"/>
+    <link href="{{ asset('img/seedling.png') }}" rel="apple-touch-icon" />
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">

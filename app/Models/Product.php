@@ -11,7 +11,7 @@ class Product extends Model implements TranslatableContract
 {
     use HasFactory, Translatable;
 
-    public $translatedAttributes = ['name', 'description', 'slug'];
+    public $translatedAttributes = ['name', 'description', 'slug', 'sizes', 'features'];
     protected $fillable = ['images_path','category_id'];
 
     public function category() {

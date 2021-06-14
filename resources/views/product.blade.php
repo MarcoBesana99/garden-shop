@@ -30,19 +30,18 @@
                     </div>
                 @endforeach
             </div>
-                <div class="row">
-                    @if ($product->sizes != null)
-                        <div class="col-lg-6 col-md-6 col-12 mt-2">
-                            {!! $product->sizes !!}
-                        </div>
-                    @endif
-                    @if ($product->features != null)
-                        <div class="col-lg-6 col-md-6 col-12 mt-2">
-                            {!! $product->features !!}
-                        </div>
-                    @endif
-                </div>
-            
+            <div class="row">
+               
+                    <div class="col-lg-6 col-md-6 col-12 mt-2">
+                        {!! $product->translation('en')->sizes !!}
+                    </div>
+                
+                @if ($product->features != null)
+                    <div class="col-lg-6 col-md-6 col-12 mt-2">
+                        {!! $product->features !!}
+                    </div>
+                @endif
+            </div>
             <div class="row">
                 @foreach ($descriptions as $desc)
                     <div class="col-md-6 mt-4">

@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function index() {
         $categories = Category::all();
-        $latestProducts = Product::orderBy('created_at','desc')->take(5)->get();
+        $latestProducts = Product::take(3)->get();
         return view('index', compact('categories','latestProducts'));
     }
 }

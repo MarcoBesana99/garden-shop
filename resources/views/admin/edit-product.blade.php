@@ -48,7 +48,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="ruFeatures">{{ __('Russian Features') }}</label>
-                                <textarea class="form-control" name="sizes:ru" id="ruFeatures">{{ $product->translate('ru')->features }}</textarea>
+                                <textarea class="form-control" name="features:ru" id="ruFeatures">{{ $product->translate('ru')->features }}</textarea>
                             </div>
                             <div class="row form-group">
                               <div class="col-12"><label>{{ __('Preview of Images') }}</label></div>

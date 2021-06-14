@@ -13,7 +13,7 @@
     </div>
     <div class="row catalog-filter">
         @foreach ($products as $product)
-            <div class="col-lg-4 col-md-6 mix all {{ strtolower($product->category->name) }}">
+            <div class="col-lg-4 col-md-6 mix all {{ strtolower($product->category->slug) }}">
                 <div class="catalog-item">
                     <a
                         href="{{ route('show.product', [app()->getLocale(), $product->category->slug, $product->slug]) }}">

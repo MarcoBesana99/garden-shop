@@ -43,7 +43,7 @@ class AdminProductController extends Controller
             'name:en' => 'required',
             'name:ru' => 'required',
             'category' => 'required',
-            'images' => 'required'
+            'images' => 'required',
         ]);
 
         foreach ($request->file('images') as $image) {
@@ -57,11 +57,15 @@ class AdminProductController extends Controller
             'category_id' => $request->category,
             'en' => [
                 'name' => $request->input('name:en'),
-                'slug' => Str::slug($request->input('name:en'), '-')
+                'slug' => Str::slug($request->input('name:en'), '-'),
+                'sizes' => $request->input('sizes:en'),
+                'features' => $request->input('features:en')
             ],
             'ru' => [
                 'name' => $request->input('name:ru'),
-                'slug' => Str::slug($request->input('name:ru'), '-')
+                'slug' => Str::slug($request->input('name:ru'), '-'),
+                'sizes' => $request->input('sizes:ru'),
+                'features' => $request->input('features:ru')
             ]
         ];
         Product::create($data);
@@ -110,11 +114,15 @@ class AdminProductController extends Controller
             'category_id' => $request->category,
             'en' => [
                 'name' => $request->input('name:en'),
-                'slug' => Str::slug($request->input('name:en'), '-')
+                'slug' => Str::slug($request->input('name:en'), '-'),
+                'sizes' => $request->input('sizes:en'),
+                'features' => $request->input('features:en')
             ],
             'ru' => [
                 'name' => $request->input('name:ru'),
-                'slug' => Str::slug($request->input('name:ru'), '-')
+                'slug' => Str::slug($request->input('name:ru'), '-'),
+                'sizes' => $request->input('sizes:ru'),
+                'features' => $request->input('features:ru')
             ]
         ];
 

@@ -28,6 +28,26 @@
                                 </div>
                             @endforeach
                         </div>
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <h6 class="font-weight-bold">{{ __('English Sizes') }}</h6>
+                                <p>{!! $product->translate('en')->sizes !!}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="font-weight-bold">{{ __('Russian Sizes') }}</h6>
+                                <p>{!! $product->translate('ru')->sizes !!}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6 class="font-weight-bold">{{ __('English Features') }}</h6>
+                                <p>{!! $product->translate('en')->features !!}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="font-weight-bold">{{ __('Russian Features') }}</h6>
+                                <p>{!! $product->translate('ru')->features !!}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -32,14 +32,14 @@
             </div>
             <div class="row">
                 @if ($product->sizes)
-                    <div class="col-lg-6 col-md-6 col-12 mt-4 mb-3">
-                        <h3 class="font-weight-bold">{{ __('Sizes') }}</h3>
+                    <div class="col-lg-6 col-md-6 col-12 mt-4">
+                        <h3 class="font-weight-bold mb-3">{{ __('Sizes') }}</h3>
                         {!! $product->sizes !!}
                     </div>
                 @endif
                 @if ($product->features)
-                    <div class="col-lg-6 col-md-6 col-12 mt-4 mb-3">
-                        <h3 class="font-weight-bold">{{ __('Features') }}</h3>
+                    <div class="col-lg-6 col-md-6 col-12 mt-4">
+                        <h3 class="font-weight-bold mb-3">{{ __('Features') }}</h3>
                         {!! $product->features !!}
                     </div>
                 @endif

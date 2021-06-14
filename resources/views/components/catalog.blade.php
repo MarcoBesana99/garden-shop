@@ -5,7 +5,7 @@
                 <ul>
                     <li data-filter="all">{{ __('All') }}</li>
                     @foreach ($categories as $category)
-                        <li data-filter="{{ '.' . strtolower($category->name) }}">{{ $category->name }}</li>
+                        <li data-filter="{{ '.' . strtolower($category->slug) }}">{{ $category->name }}</li>
                     @endforeach
                 </ul>
             </div>

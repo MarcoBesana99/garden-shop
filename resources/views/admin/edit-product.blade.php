@@ -34,6 +34,22 @@
                                 <label for="ruProductName">{{ __('Russian Name') }}</label>
                                 <input type="text" class="form-control" value="{{ $product->translate('ru')->name }}" name="name:ru" id="ruProductName" />
                             </div>
+                            <div class="form-group">
+                                <label for="enSizes">{{ __('English Sizes') }}</label>
+                                <textarea class="form-control" name="sizes:en" id="enSizes">{{ $product->translate('en')->sizes }}</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="ruSizes">{{ __('Russian Sizes') }}</label>
+                                <textarea class="form-control" name="sizes:ru" id="ruSizes">{{ $product->translate('ru')->sizes }}</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="enFeatures">{{ __('English Features') }}</label>
+                                <textarea class="form-control" name="features:en" id="enFeatures">{{ $product->translate('en')->features }}</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="ruFeatures">{{ __('Russian Features') }}</label>
+                                <textarea class="form-control" name="sizes:ru" id="ruFeatures">{{ $product->translate('ru')->features }}</textarea>
+                            </div>
                             <div class="row form-group">
                               <div class="col-12"><label>{{ __('Preview of Images') }}</label></div>
                               @foreach (json_decode($product->images_path) as $image)
@@ -62,12 +78,33 @@
     </div>
 @endsection
 @section('scripts')
+    <script src="https://cdn.ckeditor.com/ckeditor5/28.0.0/classic/ckeditor.js"></script>
     <script>
         $(document).ready(function() {
             $('.input-images').imageUploader({
                 extensions: ['.jpg', '.jpeg', '.png', '.svg', '.JPG', '.JPEG', '.PNG', '.SVG']
                 })
             $('.alert').fadeOut(4500)
+            ClassicEditor
+                .create( document.querySelector( '#enSizes' ), {toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ]} )
+                .catch( error => {
+                    console.error( error );
+                });
+            ClassicEditor
+                .create( document.querySelector( '#ruSizes' ) , {toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ]})
+                .catch( error => {
+                    console.error( error );
+                });
+            ClassicEditor
+                .create( document.querySelector( '#ruFeatures' ), {toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ]} )
+                .catch( error => {
+                    console.error( error );
+                });
+            ClassicEditor
+                .create( document.querySelector( '#enFeatures' ), {toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ]} )
+                .catch( error => {
+                    console.error( error );
+                });
         });
     </script>
 @endsection

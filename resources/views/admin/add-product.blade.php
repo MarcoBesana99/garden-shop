@@ -34,6 +34,22 @@
                                     id="ruProductName" />
                             </div>
                             <div class="form-group">
+                                <label for="enSizes">{{ __('English Sizes') }}</label>
+                                <textarea class="form-control" name="sizes:en" id="enSizes"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="ruSizes">{{ __('Russian Sizes') }}</label>
+                                <textarea class="form-control" name="sizes:ru" id="ruSizes"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="enFeatures">{{ __('English Features') }}</label>
+                                <textarea class="form-control" name="features:en" id="enFeatures"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="ruFeatures">{{ __('Russian Features') }}</label>
+                                <textarea class="form-control" name="sizes:ru" id="ruFeatures"></textarea>
+                            </div>
+                            <div class="form-group">
                                 <label>Add Images</label>
                                 <div class="input-images"></div>
                             </div>
@@ -52,12 +68,33 @@
     </div>
 @endsection
 @section('scripts')
+    <script src="https://cdn.ckeditor.com/ckeditor5/28.0.0/classic/ckeditor.js"></script>
     <script>
         $(document).ready(function() {
             $('.input-images').imageUploader({
                 extensions: ['.jpg', '.jpeg', '.png', '.svg', '.JPG', '.JPEG', '.PNG', '.SVG']
             })
             $('.alert').fadeOut(4500)
+            ClassicEditor
+                .create( document.querySelector( '#enSizes' ), {toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ]} )
+                .catch( error => {
+                    console.error( error );
+                });
+            ClassicEditor
+                .create( document.querySelector( '#ruSizes' ) , {toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ]})
+                .catch( error => {
+                    console.error( error );
+                });
+            ClassicEditor
+                .create( document.querySelector( '#ruFeatures' ), {toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ]} )
+                .catch( error => {
+                    console.error( error );
+                });
+            ClassicEditor
+                .create( document.querySelector( '#enFeatures' ), {toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ]} )
+                .catch( error => {
+                    console.error( error );
+                });
         });
 
     </script>

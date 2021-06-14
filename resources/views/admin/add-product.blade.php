@@ -47,7 +47,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="ruFeatures">{{ __('Russian Features') }}</label>
-                                <textarea class="form-control" name="sizes:ru" id="ruFeatures"></textarea>
+                                <textarea class="form-control" name="features:ru" id="ruFeatures"></textarea>
                             </div>
                             <div class="form-group">
                                 <label>Add Images</label>

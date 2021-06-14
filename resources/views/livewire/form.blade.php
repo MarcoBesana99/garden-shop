@@ -75,11 +75,11 @@
     @endif
 </div>
 @push('scripts')
-    <script>
+    <script type="text/javascript">
         $('#products').dropdown({
             multipleMode: 'label',
             input: '<input type="text" placeholder="{{ __('Search') }}">',
-            searchNoData: '<li style="color:#ddd">No Results</li>',
+            searchNoData: '<li style="color:#ddd">"{{ __('No results') }}"</li>',
             //on change populate selected products and pass it to backend
             choice: () => {
                 let selectedProducts = []

@@ -1,5 +1,6 @@
 <div>
     <form wire:submit.prevent="submitRequest">
+        @csrf
         <div class="form-header">
             <h4 class="font-weight-bold text-center">{{ __('Get a quote') }}</h4>
         </div>

@@ -70,9 +70,9 @@ class AdminRequestsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ClientRequest $clientRequest)
+    public function destroy($clientRequestId)
     {
-        $clientRequest->delete();
+        ClientRequest::where('id', $clientRequestId)->delete();
         return redirect()->back()->with('success', 'Request deleted successfully');
     }
 }

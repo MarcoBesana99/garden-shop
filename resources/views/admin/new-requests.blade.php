@@ -61,7 +61,7 @@
                                         <td><a href="{{ route('admin.requests.show', $clientRequest) }}"><i
                                                     class="fas fa-share-square btn edit-btn"></i></a></td>
                                         <td>
-                                            <form action="{{ route('admin.requests.destroy', $clientRequest) }}"
+                                            <form action="{{ route('admin.requests.destroy', $clientRequest->id) }}"
                                                 method="POST" style="display: inline-block">
                                                 @csrf
                                                 @method('DELETE')

@@ -43,11 +43,10 @@
                 <div id="products" wire:ignore>
                     <select style="display:none" multiple>
                         @foreach ($categories as $category)
-                            <optgroup label="{{ $category->name }}" data-group-id="{{ $category->id }}">
-                                @foreach ($category->products as $product)
-                                    <option value="{{ $product->id }}">{{ $product->name }}</option>
-                                @endforeach
-                            </optgroup>
+                            <option disabled>{{ $category->name }}</option>
+                            @foreach ($category->products as $product)
+                                <option value="{{ $product->id }}">{{ $product->name }}</option>
+                            @endforeach
                         @endforeach
                     </select>
                 </div>

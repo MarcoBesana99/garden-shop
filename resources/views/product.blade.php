@@ -43,8 +43,6 @@
                         {!! $product->features !!}
                     </div>
                 @endif
-            </div>
-            <div class="row">
                 @foreach ($descriptions as $desc)
                     <div class="col-md-6 mt-4">
                         <h3 class="font-weight-bold">{{ $desc->title }}</h3>

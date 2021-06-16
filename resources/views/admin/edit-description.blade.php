@@ -53,7 +53,7 @@
                                     <div class="col-12"><label>{{ __('Preview of Images') }}</label></div>
                                     @foreach (json_decode($description->images_path) as $image)
                                         <div class="col-md-4 mt-3">
-                                            <img class="mw-100" src="{{ asset('img/' . $image) }}"
+                                            <img class="mw-100" src="{{ asset('img/descriptions/' . $image) }}"
                                                 alt="{{ $description->translate('en')->title }}">
                                         </div>
                                     @endforeach

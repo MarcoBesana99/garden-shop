@@ -46,7 +46,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Add Images</label>
-                                <div class="input-images"></div>
+                                <input type="file" name="images[]" multiple>
                             </div>
                             <button type="submit" class="btn btn-primary mt-3 btn-block">Add</button>
                         </form>
@@ -59,9 +59,6 @@
 @section('scripts')
     <script>
         $(document).ready(function() {
-            $('.input-images').imageUploader({
-                extensions: ['.jpg', '.jpeg', '.png', '.svg', '.JPG', '.JPEG', '.PNG', '.SVG']
-            })
             $('.alert').fadeOut(4500)
         });
 

@@ -61,7 +61,7 @@
                           </div>
                             <div class="form-group">
                                 <label>{{ __('If you want to modify the images, add here the new ones') }}</label>
-                                <div class="input-images"></div>
+                                <input type="file" name="images[]" multiple>
                             </div>
                             <select class="form-control" name="category">
                                 <option>{{ __('Select a category') }}</option>
@@ -81,9 +81,6 @@
     <script src="https://cdn.ckeditor.com/ckeditor5/28.0.0/classic/ckeditor.js"></script>
     <script>
         $(document).ready(function() {
-            $('.input-images').imageUploader({
-                extensions: ['.jpg', '.jpeg', '.png', '.svg', '.JPG', '.JPEG', '.PNG', '.SVG']
-                })
             $('.alert').fadeOut(4500)
             ClassicEditor
                 .create( document.querySelector( '#enSizes' ), {toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ]} )

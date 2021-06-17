@@ -62,6 +62,11 @@
                     </div>
                 @endforeach
             </div>
+            <div class="row col-12">
+                <a href="{{ route('contact', app()->getLocale()) }}" class="btn custom-btn mt-4">
+                    {{ __('Get a quote') }}
+                </a>
+            </div>
         </div>
     </div>
 @endsection

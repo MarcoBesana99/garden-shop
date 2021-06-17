@@ -12,9 +12,9 @@
                         {{ __('For those, looking for the best solutions of their gardens and yards') }}</h1>
                     <div class="mt-4 subtitle"><span>{{ __('Wholesale in bulk quantities') }} </span><span> {{ __('from 150 units') }}</span></div>
                     <div>
-                        <button class="btn custom-btn mt-4">
+                        <a href="{{ route('contact', app()->getLocale()) }}" class="btn custom-btn mt-4">
                             {{ __('Get a quote') }}
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

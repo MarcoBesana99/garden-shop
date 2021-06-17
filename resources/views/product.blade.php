@@ -77,12 +77,9 @@
                 let bg = $(this).data('setbg');
                 $(this).css('background-image', 'url(' + bg + ')');
             });
-            let ifMultiple = false;
             $thisGallery = $(".owl-carousel");
-            if($('.owl-item').length > 1)
-                ifMultiple = true;
             $thisGallery.owlCarousel({
-            loop: ifMultiple,
+            loop: false,
             margin: 10,
             responsiveClass: true,
             dots: true,

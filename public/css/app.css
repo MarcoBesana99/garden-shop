@@ -10300,6 +10300,11 @@ h6 {
   line-height: 1.1;
   font-weight: 400;
 }
+@media screen and (max-width: 556px) {
+  .bread {
+    font-size: 30px;
+  }
+}
 
 #formSection {
   position: relative;

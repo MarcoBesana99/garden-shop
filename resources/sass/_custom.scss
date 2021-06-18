@@ -265,6 +265,10 @@ h6 {
   font-size: 50px;
   line-height: 1.1;
   font-weight: 400;
+
+  @media screen and (max-width: 556px) {
+    font-size: 30px;
+  }
 }
 #formSection {
   position: relative;

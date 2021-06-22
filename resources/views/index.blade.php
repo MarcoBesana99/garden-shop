@@ -68,7 +68,7 @@
                     <h3 class="font-weight-bold">{{ __('Good Prices') }}</h3>
                     <i class="fas fa-hand-holding-usd benefit-icon mt-3"></i>
                     <p class="mt-3">
-                        {{ __('We offer a wide range of goods for dacha, garden and vegetable garden. With us you can buy greenhouses, mini greenhouses, garden arbors, summer garden showers and other goods in bulk and at bargain prices.') }}
+                        {{ __('Only on our website, you can order all products presented under the section "Catalog" in bulk quantities from 150 units at the most competitive prices.') }}
                     </p>
                 </div>
             </div>
